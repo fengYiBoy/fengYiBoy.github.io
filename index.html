@@ -378,19 +378,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h2><p>[::]此为缺省状态</p>
-<h3 id="1）常见的数据类型："><a href="#1）常见的数据类型：" class="headerlink" title="1）常见的数据类型："></a>1）常见的数据类型：</h3><p>整型<br>浮点型<br>布尔型<br>复数型<br>字符串型<br>我们工作中常用到整型、字符串</p>
-<h3 id="2）整型"><a href="#2）整型" class="headerlink" title="2）整型"></a>2）整型</h3><p>我们通常根据计算机中数据编码格式，将整型分为：二进制、八进制、十进制、十六进制四种类型。</p>
-<h4 id="进制间的转换"><a href="#进制间的转换" class="headerlink" title="进制间的转换"></a>进制间的转换</h4><p>二进制转十进制：bin(int)=&gt;将十进制转为二进制   int(bin)=&gt;将二进制转为十进制<br>八进制转十进制：oct(int)=&gt;将十进制转为八进制   int(oct)=&gt;将八进制转为十进制<br>十六进制转十进制： hex(int)=&gt;将十进制转为十六进制，int(hex)=&gt;将十六进制转为十进</p>
-<h3 id="3）运算符"><a href="#3）运算符" class="headerlink" title="3）运算符"></a>3）运算符</h3><h4 id="算术运算符：-、-、-、"><a href="#算术运算符：-、-、-、" class="headerlink" title="算术运算符：+、-、*、/"></a>算术运算符：+、-、*、/</h4><p>在python中默认的数据类型是浮点型，因此在执行算术运算时5/2=2.5，而不是2.<br>‘5’并不是中间数，也就是说五舍六入，’1.5‘除外</p>
-<h4 id="："><a href="#：" class="headerlink" title="%："></a>%：</h4><p>两数进行求余运算，如果分子大于分母，得余数；如果分子小于分母，直接得分子。<br>注意：只有分子除尽分母时，结果才返回0</p>
-<h4 id="：-1"><a href="#：-1" class="headerlink" title="//："></a>//：</h4><p>两数相除取整数.<br>注意，此处得到的整数，为结果的整数部分不进行四舍五入操作。</p>
-<h4 id="：-2"><a href="#：-2" class="headerlink" title="**："></a>**：</h4><p>数的连乘<br>例如：2**4 数2连续相乘4次，也可以说数2的4次幂</p>
-<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><h3 id="对于数值运算的四舍五入操作"><a href="#对于数值运算的四舍五入操作" class="headerlink" title="对于数值运算的四舍五入操作"></a>对于数值运算的四舍五入操作</h3><p>math包中的floor()和ceil()函数</p>
-<h4 id="floor"><a href="#floor" class="headerlink" title="floor()"></a>floor()</h4><p>只舍不入，取最小：<br>import math<br>math.floor(3/2) =&gt;1   等同于 3//2</p>
-<h4 id="ceil"><a href="#ceil" class="headerlink" title="ceil()"></a>ceil()</h4><p>math.ceil(3/2) =&gt;2    此处，只要有小数位就进位，不管小数部分是否大于等于5  只入不舍</p>
-<h4 id="round-数值-保留小数位数"><a href="#round-数值-保留小数位数" class="headerlink" title="round(数值,[保留小数位数])"></a>round(数值,[保留小数位数])</h4><p>进行五舍六入操作<br>round(1.5)=&gt;2<br>round(2.5)=&gt;2<br>round(1.4,1)=&gt;1.4  意味着保留小数点后一位<br>round(2.55,1)=2.5</p>
-<h3 id="其他操作函数"><a href="#其他操作函数" class="headerlink" title="其他操作函数"></a>其他操作函数</h3><h4 id="求幂运算"><a href="#求幂运算" class="headerlink" title="求幂运算"></a>求幂运算</h4><p>pow(2,3) =&gt;8 等同于2**3</p>
+        <h2 id="一、基本数据类型"><a href="#一、基本数据类型" class="headerlink" title="一、基本数据类型"></a>一、基本数据类型</h2><h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>[::]此为缺省状态</p>
+<h3 id="1、常见的数据类型："><a href="#1、常见的数据类型：" class="headerlink" title="1、常见的数据类型："></a>1、常见的数据类型：</h3><p>整型<br>浮点型<br>布尔型<br>复数型<br>字符串型<br>我们工作中常用到整型、字符串</p>
+<h3 id="2、整型"><a href="#2、整型" class="headerlink" title="2、整型"></a>2、整型</h3><p>我们通常根据计算机中数据编码格式，将整型分为：二进制、八进制、十进制、十六进制四种类型。</p>
+<h4 id="1）进制间的转换"><a href="#1）进制间的转换" class="headerlink" title="1）进制间的转换"></a>1）进制间的转换</h4><p>二进制转十进制：bin(int)=&gt;将十进制转为二进制   int(bin)=&gt;将二进制转为十进制<br>八进制转十进制：oct(int)=&gt;将十进制转为八进制   int(oct)=&gt;将八进制转为十进制<br>十六进制转十进制： hex(int)=&gt;将十进制转为十六进制，int(hex)=&gt;将十六进制转为十进</p>
+<h3 id="3、运算符"><a href="#3、运算符" class="headerlink" title="3、运算符"></a>3、运算符</h3><h4 id="1）算术运算符：-、-、-、"><a href="#1）算术运算符：-、-、-、" class="headerlink" title="1）算术运算符：+、-、*、/"></a>1）算术运算符：+、-、*、/</h4><p>在python中默认的数据类型是浮点型，因此在执行算术运算时5/2=2.5，而不是2.<br>‘5’并不是中间数，也就是说五舍六入，’1.5‘除外</p>
+<h4 id="2）-："><a href="#2）-：" class="headerlink" title="2）%："></a>2）%：</h4><p>两数进行求余运算，如果分子大于分母，得余数；如果分子小于分母，直接得分子。<br>注意：只有分子除尽分母时，结果才返回0</p>
+<h4 id="3）-："><a href="#3）-：" class="headerlink" title="3）//："></a>3）//：</h4><p>两数相除取整数.<br>注意，此处得到的整数，为结果的整数部分不进行四舍五入操作。</p>
+<h4 id="4）-："><a href="#4）-：" class="headerlink" title="4）**："></a>4）**：</h4><p>数的连乘<br>例如：2**4 数2连续相乘4次，也可以说数2的4次幂</p>
+<h2 id="二、补充"><a href="#二、补充" class="headerlink" title="二、补充"></a>二、补充</h2><h3 id="1、对于数值运算的四舍五入操作"><a href="#1、对于数值运算的四舍五入操作" class="headerlink" title="1、对于数值运算的四舍五入操作"></a>1、对于数值运算的四舍五入操作</h3><p>math包中的floor()和ceil()函数</p>
+<h4 id="1）floor"><a href="#1）floor" class="headerlink" title="1）floor()"></a>1）floor()</h4><p>只舍不入，取最小：<br>import math<br>math.floor(3/2) =&gt;1   等同于 3//2</p>
+<h4 id="2）ceil"><a href="#2）ceil" class="headerlink" title="2）ceil()"></a>2）ceil()</h4><p>math.ceil(3/2) =&gt;2    此处，只要有小数位就进位，不管小数部分是否大于等于5  只入不舍</p>
+<h4 id="3）round-数值-保留小数位数"><a href="#3）round-数值-保留小数位数" class="headerlink" title="3）round(数值,[保留小数位数])"></a>3）round(数值,[保留小数位数])</h4><p>进行五舍六入操作<br>round(1.5)=&gt;2<br>round(2.5)=&gt;2<br>round(1.4,1)=&gt;1.4  意味着保留小数点后一位<br>round(2.55,1)=2.5</p>
+<h3 id="2、其他操作函数"><a href="#2、其他操作函数" class="headerlink" title="2、其他操作函数"></a>2、其他操作函数</h3><h4 id="求幂运算"><a href="#求幂运算" class="headerlink" title="求幂运算"></a>求幂运算</h4><p>pow(2,3) =&gt;8 等同于2**3</p>
 <h4 id="求绝对值"><a href="#求绝对值" class="headerlink" title="求绝对值"></a>求绝对值</h4><p>abs(-10) =&gt; 10</p>
 <h4 id="求两数相除的商与余数"><a href="#求两数相除的商与余数" class="headerlink" title="求两数相除的商与余数"></a>求两数相除的商与余数</h4><p>divmod(5,3) =&gt;(1,2)    类似5%3=&gt;2</p>
 <h4 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h4><p>i = 10<br>i = i + 5  等同于  i+=5<br>i = i - 5  等同于  i-=5<br>i = i <em> 5  等同于  i</em>=5<br>i = i / 5  等同于  i/=5<br>i = i//5   等同于  i//=5<br>i = i <strong> 2 等同于  i</strong>=2<br>i = i % 3  等同于  i%=3</p>
@@ -435,8 +435,8 @@
 <h5 id="例如：-4"><a href="#例如：-4" class="headerlink" title="例如："></a>例如：</h5><p>string1 = hello world<br>string1[0:3] =&gt; hel   从索引位为0的字符开始，到索引位3结束，但不包括索引位3所指向的字符。<br>string1[2:4] =&gt; ll<br>string1[0:-1] =&gt; hello worl<br>string1[0:8:2] =&gt; hlow</p>
 <h5 id="特殊的："><a href="#特殊的：" class="headerlink" title="特殊的："></a>特殊的：</h5><p>str1[:]  =&gt; ‘hello world’ 等于将字符串进行复制<br>str1[:5] =&gt; ‘hello’       如果没有标明开始索引位，默认从0开始<br>str1[::] =&gt; ‘hello world’  等同于str1[:]</p>
 <h5 id="使用步长，实现字符串反转"><a href="#使用步长，实现字符串反转" class="headerlink" title="使用步长，实现字符串反转"></a>使用步长，实现字符串反转</h5><p>string1[-1::-1]  =&gt;dlrow olleh    从索引位-1开始，一直到字符串结束，反向输出字符<br>string1[:8:-1] =&gt;dl<br>string1[:-3:-1] =&gt;dl<br>但是下列操作，会返回一个空字符串：<br>string1[-1:4]  =&gt; ‘’<br>string1[-1:-5] =&gt; ‘’</p>
-<h3 id="连接符与重复操作符"><a href="#连接符与重复操作符" class="headerlink" title="连接符与重复操作符"></a>连接符与重复操作符</h3><h4 id="：-3"><a href="#：-3" class="headerlink" title="+："></a>+：</h4><p>在字符串中使用时，作为连接两个字符串，并返回一个新字符串的作用来使用。</p>
-<h4 id="：-4"><a href="#：-4" class="headerlink" title="*："></a>*：</h4><p>重复操作指定的次数，即将字符串重复输出N次。返回一个新字符串。</p>
+<h3 id="连接符与重复操作符"><a href="#连接符与重复操作符" class="headerlink" title="连接符与重复操作符"></a>连接符与重复操作符</h3><h4 id="："><a href="#：" class="headerlink" title="+："></a>+：</h4><p>在字符串中使用时，作为连接两个字符串，并返回一个新字符串的作用来使用。</p>
+<h4 id="：-1"><a href="#：-1" class="headerlink" title="*："></a>*：</h4><p>重复操作指定的次数，即将字符串重复输出N次。返回一个新字符串。</p>
 <h4 id="注意：-6"><a href="#注意：-6" class="headerlink" title="注意："></a>注意：</h4><p>在重复操作中，必须遵循：字符串*正整数这样的格式，如果数值不是正整数，其结果返回一个空字符串，如果不是数值类型，程序报错。</p>
 <h4 id="in运算符"><a href="#in运算符" class="headerlink" title="in运算符"></a>in运算符</h4><p>用来检测指定的内容，是否在字符串中，如果存在则返回True，反之返回False</p>
 <p>#####例如:<br>交互式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ string1 = <span class="string">'hello world'</span></span><br><span class="line">$ substr = <span class="string">'e'</span></span><br><span class="line">$ substr <span class="keyword">in</span> string1</span><br><span class="line">$ True</span><br><span class="line">$ substr = <span class="string">'ll'</span></span><br><span class="line">$ substr <span class="keyword">in</span> string1</span><br><span class="line">$ True</span><br><span class="line">$ substr = <span class="string">'wr'</span></span><br><span class="line">$ substr <span class="keyword">in</span> string1</span><br><span class="line">$ False</span><br></pre></td></tr></table></figure></p>
@@ -502,27 +502,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1、编码："><a href="#1、编码：" class="headerlink" title="1、编码："></a>1、编码：</h2><p>在开发过程，对应不同的语言使用不同的字符编码。<br>英文    ISO-8859-1<br>中文    gbk或gb2312<br>目前Python为了统一编码格式，在3.0以上的版本使用了utf-8编码</p>
-<h2 id="2、print-函数"><a href="#2、print-函数" class="headerlink" title="2、print()函数"></a>2、print()函数</h2><h3 id="1-语法格式："><a href="#1-语法格式：" class="headerlink" title="1)语法格式："></a>1)语法格式：</h3><p>print(value,…,sep=’ ‘,end=’\n’)</p>
+        <h3 id="1-编码："><a href="#1-编码：" class="headerlink" title="(1)编码："></a>(1)编码：</h3><p>在开发过程，对应不同的语言使用不同的字符编码。<br>英文    ISO-8859-1<br>中文    gbk或gb2312<br>目前Python为了统一编码格式，在3.0以上的版本使用了utf-8编码</p>
+<h3 id="2-print-函数"><a href="#2-print-函数" class="headerlink" title="(2)print()函数"></a>(2)print()函数</h3><h4 id="2-1-语法格式："><a href="#2-1-语法格式：" class="headerlink" title="(2.1)语法格式："></a>(2.1)语法格式：</h4><p>print(value,…,sep=’ ‘,end=’\n’)</p>
 <p>其中，value代表我们要输出的内容，可以是字符串，可以是数值等内容<br>      sep代表输出多个值之间的间隔符，默认使用空格隔开。我们可以重新定义间隔符，比如采用：#、，等；<br>      end代表输出语句的结束标识，默认使用了换行，我们可以重新定义其他内容，其输出的内容将不再进行换行操作。</p>
-<h2 id="3、print-函数的基本使用"><a href="#3、print-函数的基本使用" class="headerlink" title="3、print()函数的基本使用"></a>3、print()函数的基本使用</h2><h3 id="1-print-常用输出方式："><a href="#1-print-常用输出方式：" class="headerlink" title="1)print()常用输出方式："></a>1)print()常用输出方式：</h3><p>print(‘hello ‘)、print(123456)等</p>
-<h3 id="2-参数格式输出"><a href="#2-参数格式输出" class="headerlink" title="2)参数格式输出"></a>2)参数格式输出</h3><h4 id="s：代表了字符串内容，其中"><a href="#s：代表了字符串内容，其中" class="headerlink" title="%s：代表了字符串内容，其中"></a>%s：代表了字符串内容，其中</h4><p>print(‘welcome %s’%Beijing)=&gt;welcome Beijing<br>print(‘welcome %10.3s’%Beijing)=&gt;welcome       Bei,输出结果为10个字符其中包含字符串Beijing中前三个，其余用空格填充</p>
-<h4 id="d：代表了整数内容，其中"><a href="#d：代表了整数内容，其中" class="headerlink" title="%d：代表了整数内容，其中"></a>%d：代表了整数内容，其中</h4><p>print(‘price %d’%10)=&gt;price 10<br>print(‘price %d’%10.5) =&gt; price 10<br>print(‘price %3d’%10000)=&gt; price 10000</p>
-<p>注意:<br>这里面的3d表示输出一个宽度为3个单元的数值，如果数值长度小于三，那么数值靠右对齐。<br>-3d表示，数值反向对齐（靠左对齐）</p>
-<p>%f：代表了浮点数内容(注意，在Python中浮点数是一个近似值，所以结果也是近似)<br>print(‘price %f’%10.2)=&gt;10.200000<br>print(‘price %.1f’%10.2) =&gt; 10.2<br>print(‘prince %.1f’%10.58) = &gt;10.6<br> 当取一位小数位的时候，将小数位第二位进行舍入操作，但是Python的中间值不是5，导致当小数位第二位是5时，直接被舍去<br>print(‘%5.1f’%10.3) =&gt; 10.3<br>输出一个宽度为5的单位，其中整数3位，小数部分1位，小数点占一位</p>
-<h2 id="4、格式化输出"><a href="#4、格式化输出" class="headerlink" title="4、格式化输出"></a>4、格式化输出</h2><p>在Python3.0之后，推荐使用{0}来代替前期的%d,%s,%f等一系列的格式化参数，采用了字符串的format函数进行处理。写法如下：</p>
-<p>print(‘welcome {0}同学，加入{1}班级’.format(‘tom’,’Python3班’))<br>其中{0}，{1}分别映射format()中的’tom’和’Python3班’，如果前面占位符中的索引值变化，那么他们映射的值也随之变化</p>
-<h2 id="5、变量"><a href="#5、变量" class="headerlink" title="5、变量"></a>5、变量</h2><h3 id="1）变量的声明："><a href="#1）变量的声明：" class="headerlink" title="1）变量的声明："></a>1）变量的声明：</h3><p>在Python没有变量类型，直接进行变量的声明，比如：i = 10</p>
-<h3 id="2-变量的赋值："><a href="#2-变量的赋值：" class="headerlink" title="2)变量的赋值："></a>2)变量的赋值：</h3><p>在python中，有两种赋值方式<br>第一种，单个变量赋值  name = ‘tom’<br>第二种，多个变量同时赋值  name, age, sex = ‘tom’， 23， ‘男’</p>
-<h2 id="6、变量在内存中的存在情况"><a href="#6、变量在内存中的存在情况" class="headerlink" title="6、变量在内存中的存在情况"></a>6、变量在内存中的存在情况</h2><h3 id="1）"><a href="#1）" class="headerlink" title="1）"></a>1）</h3><p>python中的变量，在声明和赋值时，不仅声明了变量的名字同时还为这个变量指向了内存中的地址，该地址用来存储变量的值。</p>
-<h3 id="2）"><a href="#2）" class="headerlink" title="2）"></a>2）</h3><p>python中整数、字符串、浮点数等其本身都属于常量，所以当赋值给一个变量时，</p>
-<p>如：<br>i = 10意味着将10这个常量在内存中的地址指向，因此，i = 10 ，j = 10 使用id(i),id(j）我们法向他们的id是相同的。<br>因为，他们的值10在内存中的地址是相同的。</p>
-<h3 id="3）变量与内存地址"><a href="#3）变量与内存地址" class="headerlink" title="3）变量与内存地址"></a>3）变量与内存地址</h3><p>当我们声明一个变量时，对其进行赋值。实际上就是将变量值所在的内存地址，赋值给该变量。也就是说这个变量指向其值所在的内存地址。<br>当我们改变变量的值的时候，说白了就是将变量指向的内存地址进行变化。</p>
+<h3 id="3-print-函数的基本使用"><a href="#3-print-函数的基本使用" class="headerlink" title="(3)print()函数的基本使用"></a>(3)print()函数的基本使用</h3><h4 id="3-1-print-常用输出方式："><a href="#3-1-print-常用输出方式：" class="headerlink" title="(3.1)print()常用输出方式："></a>(3.1)print()常用输出方式：</h4><p>print(‘hello ‘)、print(123456)等</p>
+<h4 id="3-2-参数格式输出"><a href="#3-2-参数格式输出" class="headerlink" title="(3.2)参数格式输出"></a>(3.2)参数格式输出</h4><h4 id="3-3-s：代表了字符串内容，其中"><a href="#3-3-s：代表了字符串内容，其中" class="headerlink" title="(3.3)s：代表了字符串内容，其中"></a>(3.3)s：代表了字符串内容，其中</h4><p>print(‘welcome %s’%Beijing)=&gt;welcome Beijing<br>print(‘welcome %10.3s’%Beijing)=&gt;welcome       Bei,输出结果为10个字符其中包含字符串Beijing中前三个，其余用空格填充</p>
+<h4 id="3-4）-d：代表了整数内容，其中"><a href="#3-4）-d：代表了整数内容，其中" class="headerlink" title="(3.4）%d：代表了整数内容，其中"></a>(3.4）%d：代表了整数内容，其中</h4><p>print(‘price %d’%10)=&gt;price 10<br>print(‘price %d’%10.5) =&gt; price 10<br>print(‘price %3d’%10000)=&gt; price 10000</p>
+<h4 id="3-5）注意"><a href="#3-5）注意" class="headerlink" title="(3.5）注意:"></a>(3.5）注意:</h4><p>（1）这里面的3d表示输出一个宽度为3个单元的数值，如果数值长度小于三，那么数值靠右对齐。<br>-3d表示，数值反向对齐（靠左对齐）<br>（2）%f：代表了浮点数内容(注意，在Python中浮点数是一个近似值，所以结果也是近似)<br>print(‘price %f’%10.2)=&gt;10.200000<br>print(‘price %.1f’%10.2) =&gt; 10.2<br>print(‘prince %.1f’%10.58) = &gt;10.6<br> 当取一位小数位的时候，将小数位第二位进行舍入操作，但是Python的中间值不是5，导致当小数位第二位是5时，直接被舍去<br>print(‘%5.1f’%10.3) =&gt; 10.3<br>输出一个宽度为5的单位，其中整数3位，小数部分1位，小数点占一位</p>
+<h3 id="4-格式化输出"><a href="#4-格式化输出" class="headerlink" title="(4)格式化输出"></a>(4)格式化输出</h3><p>1）在Python3.0之后，推荐使用{0}来代替前期的%d,%s,%f等一系列的格式化参数，采用了字符串的format函数进行处理。写法如下：<br>2）print(‘welcome {0}同学，加入{1}班级’.format(‘tom’,’Python3班’))<br>其中{0}，{1}分别映射format()中的’tom’和’Python3班’，如果前面占位符中的索引值变化，那么他们映射的值也随之变化</p>
+<h3 id="5-变量"><a href="#5-变量" class="headerlink" title="(5)变量"></a>(5)变量</h3><h4 id="5-1）变量的声明："><a href="#5-1）变量的声明：" class="headerlink" title="(5.1）变量的声明："></a>(5.1）变量的声明：</h4><p>在Python没有变量类型，直接进行变量的声明，比如：i = 10</p>
+<h4 id="5-2-变量的赋值："><a href="#5-2-变量的赋值：" class="headerlink" title="(5.2)变量的赋值："></a>(5.2)变量的赋值：</h4><p>在python中，有两种赋值方式<br>第一种，单个变量赋值  name = ‘tom’<br>第二种，多个变量同时赋值  name, age, sex = ‘tom’， 23， ‘男’</p>
+<h3 id="6-变量在内存中的存在情况"><a href="#6-变量在内存中的存在情况" class="headerlink" title="(6)变量在内存中的存在情况"></a>(6)变量在内存中的存在情况</h3><h4 id="6-1）"><a href="#6-1）" class="headerlink" title="(6.1）"></a>(6.1）</h4><p>python中的变量，在声明和赋值时，不仅声明了变量的名字同时还为这个变量指向了内存中的地址，该地址用来存储变量的值。</p>
+<h4 id="6-2）"><a href="#6-2）" class="headerlink" title="(6.2）"></a>(6.2）</h4><p>python中整数、字符串、浮点数等其本身都属于常量，所以当赋值给一个变量时，</p>
+<p>例如：<br>i = 10意味着将10这个常量在内存中的地址指向，因此，i = 10 ，j = 10 使用id(i),id(j）我们法向他们的id是相同的。<br>因为，他们的值10在内存中的地址是相同的。</p>
+<h4 id="6-3）变量与内存地址"><a href="#6-3）变量与内存地址" class="headerlink" title="(6.3）变量与内存地址"></a>(6.3）变量与内存地址</h4><p>当我们声明一个变量时，对其进行赋值。实际上就是将变量值所在的内存地址，赋值给该变量。也就是说这个变量指向其值所在的内存地址。<br>当我们改变变量的值的时候，说白了就是将变量指向的内存地址进行变化。</p>
 <p>例如：i = 2<br>      系统在读这句话时，首先会给常量’2‘在堆里面分配一个内存地址，然后把常量’2‘的内存地址给’i’。这时，‘i’指向’2‘的内存地址。</p>
-<h3 id="4）变量与常量"><a href="#4）变量与常量" class="headerlink" title="4）变量与常量"></a>4）变量与常量</h3><p>变量：我们认为其内容是临时结果，可变的。供后续的程序代码进行调用。</p>
-<p>常量：我们认为其内容是不变的，或者在程序运行的过程中也不发生改变。<br>在Python中，我们通过大写变量名，来表明这是一个常量，比如：CARDID = ‘12048377293’</p>
-<h3 id="5-变量命名规则"><a href="#5-变量命名规则" class="headerlink" title="5)变量命名规则"></a>5)变量命名规则</h3><p>首先，Python中的变量命名，必须由字母、数字或下划线三者组成，不能有其他的字符出现<br>其次，变量名的首个字符，必须是字母或下划线<br>然后，Python中的关键字不能作为变量名来使用，常用的关键字诸如：if,for,is,none等等。<br>Python是严格区分大小写的语言，其中A = 10 ，a = 10。我们认为这是两个不同的变量</p>
-<p>一般变量有两种命名方式：<br>1、驼峰体<br>userName = ‘sam’<br>passWord = 123<br>2、下划线<br>user_name = ‘sam’<br>number_of_students = 100<br>推荐使用下划线的方式定义变量名</p>
+<h3 id="7-变量与常量"><a href="#7-变量与常量" class="headerlink" title="(7)变量与常量"></a>(7)变量与常量</h3><h4 id="7-1）变量："><a href="#7-1）变量：" class="headerlink" title="(7.1）变量："></a>(7.1）变量：</h4><p>我们认为其内容是临时结果，可变的。供后续的程序代码进行调用。</p>
+<h4 id="7-2）常量："><a href="#7-2）常量：" class="headerlink" title="(7.2）常量："></a>(7.2）常量：</h4><p>我们认为其内容是不变的，或者在程序运行的过程中也不发生改变。<br>在Python中，我们通过大写变量名，来表明这是一个常量，比如：CARDID = ‘12048377293’</p>
+<h4 id="7-3-变量命名规则"><a href="#7-3-变量命名规则" class="headerlink" title="(7.3)变量命名规则"></a>(7.3)变量命名规则</h4><p>首先，Python中的变量命名，必须由字母、数字或下划线三者组成，不能有其他的字符出现<br>其次，变量名的首个字符，必须是字母或下划线<br>然后，Python中的关键字不能作为变量名来使用，常用的关键字诸如：if,for,is,none等等。<br>Python是严格区分大小写的语言，其中A = 10 ，a = 10。我们认为这是两个不同的变量</p>
+<h4 id="4）一般变量有两种命名方式："><a href="#4）一般变量有两种命名方式：" class="headerlink" title="4）一般变量有两种命名方式："></a>4）一般变量有两种命名方式：</h4><p>（1）驼峰体<br>userName = ‘sam’<br>passWord = 123<br>（2）下划线<br>user_name = ‘sam’<br>number_of_students = 100<br>推荐使用下划线的方式定义变量名</p>
 
       
 

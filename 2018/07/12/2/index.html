@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="亦非亦的博客">
 <meta property="og:description" content="1、编码：在开发过程，对应不同的语言使用不同的字符编码。英文    ISO-8859-1中文    gbk或gb2312目前Python为了统一编码格式，在3.0以上的版本使用了utf-8编码 2、print()函数2.1语法格式：print(value,…,sep=’ ‘,end=’\n’) 其中，value代表我们要输出的内容，可以是字符串，可以是数值等内容      sep代表输出多个值之间">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-15T22:52:25.753Z">
+<meta property="og:updated_time" content="2018-07-15T23:23:33.789Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一、基础语法">
 <meta name="twitter:description" content="1、编码：在开发过程，对应不同的语言使用不同的字符编码。英文    ISO-8859-1中文    gbk或gb2312目前Python为了统一编码格式，在3.0以上的版本使用了utf-8编码 2、print()函数2.1语法格式：print(value,…,sep=’ ‘,end=’\n’) 其中，value代表我们要输出的内容，可以是字符串，可以是数值等内容      sep代表输出多个值之间">
@@ -168,15 +168,15 @@
 <h1 id="3、print-函数的基本使用"><a href="#3、print-函数的基本使用" class="headerlink" title="3、print()函数的基本使用"></a>3、print()函数的基本使用</h1><h2 id="3-1print-常用输出方式："><a href="#3-1print-常用输出方式：" class="headerlink" title="3.1print()常用输出方式："></a>3.1print()常用输出方式：</h2><p>print(‘hello ‘)、print(123456)等</p>
 <h2 id="3-2参数格式输出"><a href="#3-2参数格式输出" class="headerlink" title="3.2参数格式输出"></a>3.2参数格式输出</h2><h3 id="3-2-1-s：代表了字符串内容，其中"><a href="#3-2-1-s：代表了字符串内容，其中" class="headerlink" title="3.2.1 %s：代表了字符串内容，其中"></a>3.2.1 %s：代表了字符串内容，其中</h3><p>print(‘welcome %s’%Beijing)=&gt;welcome Beijing<br>print(‘welcome %10.3s’%Beijing)=&gt;welcome       Bei,输出结果为10个字符其中包含字符串Beijing中前三个，其余用空格填充</p>
 <h3 id="3-2-2-d：代表了整数内容，其中"><a href="#3-2-2-d：代表了整数内容，其中" class="headerlink" title="3.2.2 %d：代表了整数内容，其中"></a>3.2.2 %d：代表了整数内容，其中</h3><p>print(‘price %d’%10)=&gt;price 10<br>print(‘price %d’%10.5) =&gt; price 10<br>print(‘price %3d’%10000)=&gt; price 10000</p>
-<h2 id="3-5注意"><a href="#3-5注意" class="headerlink" title="3.5注意:"></a>3.5注意:</h2><p>（1）这里面的3d表示输出一个宽度为3个单元的数值，如果数值长度小于三，那么数值靠右对齐。<br>-3d表示，数值反向对齐（靠左对齐）<br>（2）%f：代表了浮点数内容(注意，在Python中浮点数是一个近似值，所以结果也是近似)<br>print(‘price %f’%10.2)=&gt;10.200000<br>print(‘price %.1f’%10.2) =&gt; 10.2<br>print(‘prince %.1f’%10.58) = &gt;10.6<br> 当取一位小数位的时候，将小数位第二位进行舍入操作，但是Python的中间值不是5，导致当小数位第二位是5时，直接被舍去<br>print(‘%5.1f’%10.3) =&gt; 10.3<br>输出一个宽度为5的单位，其中整数3位，小数部分1位，小数点占一位</p>
+<h4 id="注意"><a href="#注意" class="headerlink" title="*注意:"></a>*注意:</h4><p>（1）这里面的3d表示输出一个宽度为3个单元的数值，如果数值长度小于三，那么数值靠右对齐。<br>-3d表示，数值反向对齐（靠左对齐）<br>（2）%f：代表了浮点数内容(注意，在Python中浮点数是一个近似值，所以结果也是近似)<br>print(‘price %f’%10.2)=&gt;10.200000<br>print(‘price %.1f’%10.2) =&gt; 10.2<br>print(‘prince %.1f’%10.58) = &gt;10.6<br> 当取一位小数位的时候，将小数位第二位进行舍入操作，但是Python的中间值不是5，导致当小数位第二位是5时，直接被舍去<br>print(‘%5.1f’%10.3) =&gt; 10.3<br>输出一个宽度为5的单位，其中整数3位，小数部分1位，小数点占一位</p>
 <h1 id="4、格式化输出"><a href="#4、格式化输出" class="headerlink" title="4、格式化输出"></a>4、格式化输出</h1><p>1）在Python3.0之后，推荐使用{0}来代替前期的%d,%s,%f等一系列的格式化参数，采用了字符串的format函数进行处理。写法如下：<br>2）print(‘welcome {0}同学，加入{1}班级’.format(‘tom’,’Python3班’))<br>其中{0}，{1}分别映射format()中的’tom’和’Python3班’，如果前面占位符中的索引值变化，那么他们映射的值也随之变化</p>
 <h1 id="5、变量"><a href="#5、变量" class="headerlink" title="5、变量"></a>5、变量</h1><h2 id="5-1变量的声明："><a href="#5-1变量的声明：" class="headerlink" title="5.1变量的声明："></a>5.1变量的声明：</h2><p>在Python没有变量类型，直接进行变量的声明，比如：i = 10</p>
 <h2 id="5-2变量的赋值："><a href="#5-2变量的赋值：" class="headerlink" title="5.2变量的赋值："></a>5.2变量的赋值：</h2><p>在python中，有两种赋值方式<br>第一种，单个变量赋值  name = ‘tom’<br>第二种，多个变量同时赋值  name, age, sex = ‘tom’， 23， ‘男’</p>
 <h1 id="6、变量在内存中的存在情况"><a href="#6、变量在内存中的存在情况" class="headerlink" title="6、变量在内存中的存在情况"></a>6、变量在内存中的存在情况</h1><h2 id="6-1"><a href="#6-1" class="headerlink" title="6.1"></a>6.1</h2><p>python中的变量，在声明和赋值时，不仅声明了变量的名字同时还为这个变量指向了内存中的地址，该地址用来存储变量的值。</p>
 <h2 id="6-2"><a href="#6-2" class="headerlink" title="6.2"></a>6.2</h2><p>python中整数、字符串、浮点数等其本身都属于常量，所以当赋值给一个变量时，</p>
-<h3 id="例如："><a href="#例如：" class="headerlink" title="例如："></a>例如：</h3><p>i = 10意味着将10这个常量在内存中的地址指向，因此，i = 10 ，j = 10 使用id(i),id(j）我们法向他们的id是相同的。<br>因为，他们的值10在内存中的地址是相同的。</p>
+<h4 id="例如："><a href="#例如：" class="headerlink" title="*例如："></a>*例如：</h4><p>i = 10意味着将10这个常量在内存中的地址指向，因此，i = 10 ，j = 10 使用id(i),id(j）我们法向他们的id是相同的。<br>因为，他们的值10在内存中的地址是相同的。</p>
 <h2 id="6-3变量与内存地址"><a href="#6-3变量与内存地址" class="headerlink" title="6.3变量与内存地址"></a>6.3变量与内存地址</h2><p>当我们声明一个变量时，对其进行赋值。实际上就是将变量值所在的内存地址，赋值给该变量。也就是说这个变量指向其值所在的内存地址。<br>当我们改变变量的值的时候，说白了就是将变量指向的内存地址进行变化。</p>
-<h3 id="例如：i-2"><a href="#例如：i-2" class="headerlink" title="例如：i = 2"></a>例如：i = 2</h3><p>系统在读这句话时，首先会给常量’2‘在堆里面分配一个内存地址，然后把常量’2‘的内存地址给’i’。这时，‘i’指向’2‘的内存地址。</p>
+<h4 id="例如：i-2"><a href="#例如：i-2" class="headerlink" title="*例如：i = 2"></a>*例如：i = 2</h4><p>系统在读这句话时，首先会给常量’2‘在堆里面分配一个内存地址，然后把常量’2‘的内存地址给’i’。这时，‘i’指向’2‘的内存地址。</p>
 <h1 id="7、变量与常量"><a href="#7、变量与常量" class="headerlink" title="7、变量与常量"></a>7、变量与常量</h1><h2 id="7-1变量："><a href="#7-1变量：" class="headerlink" title="7.1变量："></a>7.1变量：</h2><p>我们认为其内容是临时结果，可变的。供后续的程序代码进行调用。</p>
 <h2 id="7-2常量："><a href="#7-2常量：" class="headerlink" title="7.2常量："></a>7.2常量：</h2><p>我们认为其内容是不变的，或者在程序运行的过程中也不发生改变。<br>在Python中，我们通过大写变量名，来表明这是一个常量，比如：CARDID = ‘12048377293’</p>
 <h2 id="7-3变量命名规则"><a href="#7-3变量命名规则" class="headerlink" title="7.3变量命名规则"></a>7.3变量命名规则</h2><p>首先，Python中的变量命名，必须由字母、数字或下划线三者组成，不能有其他的字符出现<br>其次，变量名的首个字符，必须是字母或下划线<br>然后，Python中的关键字不能作为变量名来使用，常用的关键字诸如：if,for,is,none等等。<br>Python是严格区分大小写的语言，其中A = 10 ，a = 10。我们认为这是两个不同的变量</p>
@@ -278,7 +278,7 @@
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          数据类型
+          二、数据类型
         
       </div>
     </a>

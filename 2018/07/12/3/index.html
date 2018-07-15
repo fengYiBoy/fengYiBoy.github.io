@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="亦非亦的博客">
 <meta property="og:description" content="一、基本数据类型注意[::]此为缺省状态 1、常见的数据类型：整型浮点型布尔型复数型字符串型我们工作中常用到整型、字符串 2、整型我们通常根据计算机中数据编码格式，将整型分为：二进制、八进制、十进制、十六进制四种类型。 2.1进制间的转换二进制转十进制：bin(int)=&amp;gt;将十进制转为二进制   int(bin)=&amp;gt;将二进制转为十进制八进制转十进制：oct(int)=&amp;gt;将十进制转">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-15T11:42:06.601Z">
+<meta property="og:updated_time" content="2018-07-15T11:58:56.377Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据类型">
 <meta name="twitter:description" content="一、基本数据类型注意[::]此为缺省状态 1、常见的数据类型：整型浮点型布尔型复数型字符串型我们工作中常用到整型、字符串 2、整型我们通常根据计算机中数据编码格式，将整型分为：二进制、八进制、十进制、十六进制四种类型。 2.1进制间的转换二进制转十进制：bin(int)=&amp;gt;将十进制转为二进制   int(bin)=&amp;gt;将二进制转为十进制八进制转十进制：oct(int)=&amp;gt;将十进制转">
@@ -167,15 +167,15 @@
 <h3 id="2、整型"><a href="#2、整型" class="headerlink" title="2、整型"></a>2、整型</h3><p>我们通常根据计算机中数据编码格式，将整型分为：二进制、八进制、十进制、十六进制四种类型。</p>
 <h4 id="2-1进制间的转换"><a href="#2-1进制间的转换" class="headerlink" title="2.1进制间的转换"></a>2.1进制间的转换</h4><p>二进制转十进制：bin(int)=&gt;将十进制转为二进制   int(bin)=&gt;将二进制转为十进制<br>八进制转十进制：oct(int)=&gt;将十进制转为八进制   int(oct)=&gt;将八进制转为十进制<br>十六进制转十进制： hex(int)=&gt;将十进制转为十六进制，int(hex)=&gt;将十六进制转为十进</p>
 <h3 id="3、运算符"><a href="#3、运算符" class="headerlink" title="3、运算符"></a>3、运算符</h3><h4 id="3-1算术运算符：-、-、-、"><a href="#3-1算术运算符：-、-、-、" class="headerlink" title="3.1算术运算符：+、-、*、/"></a>3.1算术运算符：+、-、*、/</h4><p>在python中默认的数据类型是浮点型，因此在执行算术运算时5/2=2.5，而不是2.<br>‘5’并不是中间数，也就是说五舍六入，’1.5‘除外</p>
-<h4 id="3-2-："><a href="#3-2-：" class="headerlink" title="3.2%："></a>3.2%：</h4><p>两数进行求余运算，如果分子大于分母，得余数；如果分子小于分母，直接得分子。</p>
+<h4 id="3-2-："><a href="#3-2-：" class="headerlink" title="3.2 %："></a>3.2 %：</h4><p>两数进行求余运算，如果分子大于分母，得余数；如果分子小于分母，直接得分子。</p>
 <h5 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h5><p>只有分子除尽分母时，结果才返回0</p>
-<h4 id="3-3-："><a href="#3-3-：" class="headerlink" title="3.3//："></a>3.3//：</h4><p>两数相除取整数.</p>
+<h4 id="3-3-："><a href="#3-3-：" class="headerlink" title="3.3 //："></a>3.3 //：</h4><p>两数相除取整数.</p>
 <h5 id="注意：-1"><a href="#注意：-1" class="headerlink" title="注意："></a>注意：</h5><p>此处得到的整数，为结果的整数部分不进行四舍五入操作。</p>
-<h4 id="3-4-："><a href="#3-4-：" class="headerlink" title="3.4**："></a>3.4**：</h4><p>数的连乘<br>例如：2**4 数2连续相乘4次，也可以说数2的4次幂</p>
+<h4 id="3-4-："><a href="#3-4-：" class="headerlink" title="3.4 **："></a>3.4 **：</h4><p>数的连乘<br>例如：2**4 数2连续相乘4次，也可以说数2的4次幂</p>
 <h2 id="二、补充"><a href="#二、补充" class="headerlink" title="二、补充"></a>二、补充</h2><h3 id="1、对于数值运算的四舍五入操作"><a href="#1、对于数值运算的四舍五入操作" class="headerlink" title="1、对于数值运算的四舍五入操作"></a>1、对于数值运算的四舍五入操作</h3><p>math包中的floor()和ceil()函数</p>
-<h4 id="1-1floor"><a href="#1-1floor" class="headerlink" title="1.1floor()"></a>1.1floor()</h4><p>只舍不入，取最小：<br>import math<br>math.floor(3/2) =&gt;1   等同于 3//2</p>
-<h4 id="1-2ceil"><a href="#1-2ceil" class="headerlink" title="1.2ceil()"></a>1.2ceil()</h4><p>math.ceil(3/2) =&gt;2    此处，只要有小数位就进位，不管小数部分是否大于等于5  只入不舍</p>
-<h4 id="1-3round-数值-保留小数位数"><a href="#1-3round-数值-保留小数位数" class="headerlink" title="1.3round(数值,[保留小数位数])"></a>1.3round(数值,[保留小数位数])</h4><p>进行五舍六入操作<br>round(1.5)=&gt;2<br>round(2.5)=&gt;2<br>round(1.4,1)=&gt;1.4  意味着保留小数点后一位<br>round(2.55,1)=2.5</p>
+<h4 id="1-1-floor"><a href="#1-1-floor" class="headerlink" title="1.1 floor()"></a>1.1 floor()</h4><p>只舍不入，取最小：<br>import math<br>math.floor(3/2) =&gt;1   等同于 3//2</p>
+<h4 id="1-2-ceil"><a href="#1-2-ceil" class="headerlink" title="1.2 ceil()"></a>1.2 ceil()</h4><p>math.ceil(3/2) =&gt;2    此处，只要有小数位就进位，不管小数部分是否大于等于5  只入不舍</p>
+<h4 id="1-3-round-数值-保留小数位数"><a href="#1-3-round-数值-保留小数位数" class="headerlink" title="1.3 round(数值,[保留小数位数])"></a>1.3 round(数值,[保留小数位数])</h4><p>进行五舍六入操作<br>round(1.5)=&gt;2<br>round(2.5)=&gt;2<br>round(1.4,1)=&gt;1.4  意味着保留小数点后一位<br>round(2.55,1)=2.5</p>
 <h3 id="2、其他操作函数"><a href="#2、其他操作函数" class="headerlink" title="2、其他操作函数"></a>2、其他操作函数</h3><h4 id="2-1求幂运算"><a href="#2-1求幂运算" class="headerlink" title="2.1求幂运算"></a>2.1求幂运算</h4><p>pow(2,3) =&gt;8 等同于2**3</p>
 <h4 id="2-2求绝对值"><a href="#2-2求绝对值" class="headerlink" title="2.2求绝对值"></a>2.2求绝对值</h4><p>abs(-10) =&gt; 10</p>
 <h4 id="2-3求两数相除的商与余数"><a href="#2-3求两数相除的商与余数" class="headerlink" title="2.3求两数相除的商与余数"></a>2.3求两数相除的商与余数</h4><p>divmod(5,3) =&gt;(1,2)    类似5%3=&gt;2</p>
@@ -185,15 +185,15 @@
 <h5 id="例如："><a href="#例如：" class="headerlink" title="例如："></a>例如：</h5><p>a = True     a + 1 =&gt; 2<br>b = False b + 1 =&gt;1<br>a + b =&gt; 1</p>
 <h5 id="注意：-2"><a href="#注意：-2" class="headerlink" title="注意："></a>注意：</h5><p>通常我们在python，不能将布尔型参与算术运算的。布尔型一般参加比较运算或逻辑运算，其返回值还是布尔型。<br>布尔型求非： not<br>not a =&gt; False<br>not b =&gt; True</p>
 <h3 id="4、精确的十进制"><a href="#4、精确的十进制" class="headerlink" title="4、精确的十进制"></a>4、精确的十进制</h3><p>在python中，我们通过阅读官方文档了解到，浮点数是一种近似值的表示，因此直接使用浮点数时常常出现精度丢失或不匹配情况发生。</p>
-<h4 id="4-1Decmal"><a href="#4-1Decmal" class="headerlink" title="4.1Decmal()"></a>4.1Decmal()</h4><p>python中提出了Decimal对象来进行解决，通过引入 import decimal生成一个decimal对象，将浮点数转换为decimal类型，可以支持完成对应的算术运算。</p>
+<h4 id="4-1-Decmal"><a href="#4-1-Decmal" class="headerlink" title="4.1 Decmal()"></a>4.1 Decmal()</h4><p>python中提出了Decimal对象来进行解决，通过引入 import decimal生成一个decimal对象，将浮点数转换为decimal类型，可以支持完成对应的算术运算。</p>
 <h5 id="例如：-1"><a href="#例如：-1" class="headerlink" title="例如："></a>例如：</h5><p>from decimal import Decimal   # 引入decimal包中的Deciaml对象<br>f1 = 12.4556<br>f2 = 24.3<br>c = Decimal.from_float(f1)    # 将浮点数转换为decimal对象<br>a = Decimal(f1).quantize(Decimal(‘0.00’)) #将浮点数转换为decimal对象，同时指定该数值的精度，保留小数点后两位，并自动完成四舍五入。<br>b = Decimal(f2).quantize(Decimal(‘0.00’))<br>print((a*b).quantize(Decimal(‘0.00’)))</p>
 <h5 id="注意：-3"><a href="#注意：-3" class="headerlink" title="注意："></a>注意：</h5><p>一般转为Decimal运算后还要转为float</p>
 <h3 id="5、字符串"><a href="#5、字符串" class="headerlink" title="5、字符串"></a>5、字符串</h3><h4 id="5-1字符串声明："><a href="#5-1字符串声明：" class="headerlink" title="5.1字符串声明："></a>5.1字符串声明：</h4><p>可以使用’’也可以使用””，他们都可以表示字符串内容。</p>
 <h4 id="5-2比较运算符："><a href="#5-2比较运算符：" class="headerlink" title="5.2比较运算符："></a>5.2比较运算符：</h4><p>‘&gt;、&lt;、==、!=、&gt;=、&lt;=’他们的返回值为布尔型，即True或False</p>
 <p>字符串进行比较时，采用对应位置的逐字母进行比较，首先将字母转成ASCII码，然后根据码值进行比较大小。如果一旦出现一方的字母码值大于另一方，就结束比较。</p>
 <h5 id="提示："><a href="#提示：" class="headerlink" title="提示："></a>提示：</h5><p>在键盘上，所有的字符的ASCII码值都小于a,b,c…..这些字母的码值<br>只有这四个字符的ASCII码值大于字母z的码值：’{‘、’|’、’}’、’~’，它们的码值从123-126</p>
-<h4 id="5-3input"><a href="#5-3input" class="headerlink" title="5.3input()"></a>5.3input()</h4><p>我们使用input()，允许进行交互式输入，默认input()输入的值类型为str字符串类型。<br>例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ input(<span class="string">'请输入：'</span>)</span><br></pre></td></tr></table></figure></p>
-<h3 id="6、字符串常用的方法"><a href="#6、字符串常用的方法" class="headerlink" title="6、字符串常用的方法"></a>6、字符串常用的方法</h3><h4 id="6-1find-查找"><a href="#6-1find-查找" class="headerlink" title="6.1find() 查找"></a>6.1find() 查找</h4><h5 id="6-1-1函数格式："><a href="#6-1-1函数格式：" class="headerlink" title="6.1.1函数格式："></a>6.1.1函数格式：</h5><p>str.find(子字符串[,开始索引位，结束索引位])</p>
+<h4 id="5-3-input"><a href="#5-3-input" class="headerlink" title="5.3 input()"></a>5.3 input()</h4><p>我们使用input()，允许进行交互式输入，默认input()输入的值类型为str字符串类型。<br>例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ input(<span class="string">'请输入：'</span>)</span><br></pre></td></tr></table></figure></p>
+<h3 id="6、字符串常用的方法"><a href="#6、字符串常用的方法" class="headerlink" title="6、字符串常用的方法"></a>6、字符串常用的方法</h3><h4 id="6-1-find-查找"><a href="#6-1-find-查找" class="headerlink" title="6.1 find() 查找"></a>6.1 find() 查找</h4><h5 id="6-1-1函数格式："><a href="#6-1-1函数格式：" class="headerlink" title="6.1.1函数格式："></a>6.1.1函数格式：</h5><p>str.find(子字符串[,开始索引位，结束索引位])</p>
 <h5 id="6-1-2返回值："><a href="#6-1-2返回值：" class="headerlink" title="6.1.2返回值："></a>6.1.2返回值：</h5><p>如果查找成功，则返回所查找内容在字符串中的索引位置，如果没有找到，返回-1.</p>
 <h5 id="注意：-4"><a href="#注意：-4" class="headerlink" title="注意："></a>注意：</h5><p>如果所查找的内容中，有多个相同的字母，只会返回第一个字母所在的索引位。比如：<br>str1 = ‘hello’<br>str1.find(‘ll’) =&gt; 2  该例中，’ll’在字符串中出现了两次，但只会返回第一次出现的索引位置。</p>
 <p>为什么查找时，没有找到目标字符串的情况下会返回-1。其实，在find操作中，会对字符串进行扫描从字符串的索引位0开始，一直到字符串结尾，如果在字符串最后一位没有找到匹配的内容，将指向字符串结束符(EOF)，该结束符为-1。所以找不到时，find返回值为-1.<br>更多用法：</p>
@@ -201,12 +201,12 @@
 <h3 id="7、对比："><a href="#7、对比：" class="headerlink" title="7、对比："></a>7、对比：</h3><h4 id="7-1-index"><a href="#7-1-index" class="headerlink" title="7.1 index()"></a>7.1 index()</h4><p>返回指定字符的索引位</p>
 <h5 id="7-1-1函数格式："><a href="#7-1-1函数格式：" class="headerlink" title="7.1.1函数格式："></a>7.1.1函数格式：</h5><p>index(子字符串[,开始索引位，结束索引位])</p>
 <h5 id="7-1-2返回值："><a href="#7-1-2返回值：" class="headerlink" title="7.1.2返回值："></a>7.1.2返回值：</h5><p>如果找到指定的字符串，则返回其索引位；如果找不到就报错ValueError</p>
-<h4 id="7-2find-与index-函数的区别"><a href="#7-2find-与index-函数的区别" class="headerlink" title="7.2find()与index()函数的区别"></a>7.2find()与index()函数的区别</h4><p>第一，两者在执行结果时类似的，如果找到指定的字符就会返回其索引位<br>第二，find()如果找不到指定的字符时，返回-1；而index()找不到指定的字符，raise ValueError.<br>第三，从效率上来讲，index的查询速度要优于find,因为在python中对于像字符串这样的有序数据类型，会产生一个索引对象来自动维护其序列，find()函数不管是否有这样的序列，都需要在字符串本身进行逐一查找，而index()会通过这个索引对象的映射方式，来快速找到对应的索引位。</p>
-<h4 id="7-3plit-拆分字符串"><a href="#7-3plit-拆分字符串" class="headerlink" title="7.3plit() 拆分字符串"></a>7.3plit() 拆分字符串</h4><h5 id="7-3-1函数格式："><a href="#7-3-1函数格式：" class="headerlink" title="7.3.1函数格式："></a>7.3.1函数格式：</h5><p>str.split([分隔符])</p>
+<h4 id="7-2-find-与index-函数的区别"><a href="#7-2-find-与index-函数的区别" class="headerlink" title="7.2 find()与index()函数的区别"></a>7.2 find()与index()函数的区别</h4><p>第一，两者在执行结果时类似的，如果找到指定的字符就会返回其索引位<br>第二，find()如果找不到指定的字符时，返回-1；而index()找不到指定的字符，raise ValueError.<br>第三，从效率上来讲，index的查询速度要优于find,因为在python中对于像字符串这样的有序数据类型，会产生一个索引对象来自动维护其序列，find()函数不管是否有这样的序列，都需要在字符串本身进行逐一查找，而index()会通过这个索引对象的映射方式，来快速找到对应的索引位。</p>
+<h4 id="7-3-plit-拆分字符串"><a href="#7-3-plit-拆分字符串" class="headerlink" title="7.3 plit() 拆分字符串"></a>7.3 plit() 拆分字符串</h4><h5 id="7-3-1函数格式："><a href="#7-3-1函数格式：" class="headerlink" title="7.3.1函数格式："></a>7.3.1函数格式：</h5><p>str.split([分隔符])</p>
 <h5 id="7-3-2返回值："><a href="#7-3-2返回值：" class="headerlink" title="7.3.2返回值："></a>7.3.2返回值：</h5><p>根据指定的分隔符，对字符串进行拆分，返回一个列表；如果不指定分隔符，那么会将整个字符串，作为列表的一个元素。</p>
 <h5 id="例如：-3"><a href="#例如：-3" class="headerlink" title="例如："></a>例如：</h5><p>交互式:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ string1 = <span class="string">'tv,pc,notebook,phone'</span></span><br><span class="line">$ string1.split(<span class="string">','</span>)</span><br><span class="line">$ [<span class="string">'tv'</span>, <span class="string">'pc'</span>, <span class="string">'notebook'</span>, <span class="string">'phone'</span>]</span><br><span class="line">$ string1.split()</span><br><span class="line">$ [<span class="string">'tv,pc,notebook,phone'</span>]</span><br></pre></td></tr></table></figure></p>
 <h5 id="注意：-5"><a href="#注意：-5" class="headerlink" title="注意："></a>注意：</h5><p>split中的分隔符，我们根据字符串中的实际情况而定。如果使用了不正确的分隔符，str.split(‘错误分隔符’)操作结果str.split(),会将整个字符串作为列表的一个元素。</p>
-<h4 id="7-4strip"><a href="#7-4strip" class="headerlink" title="7.4strip()"></a>7.4strip()</h4><p>字符串左右两端去除指定字符（默认情况，去除空格）</p>
+<h4 id="7-4-strip"><a href="#7-4-strip" class="headerlink" title="7.4 strip()"></a>7.4 strip()</h4><p>字符串左右两端去除指定字符（默认情况，去除空格）</p>
 <h5 id="7-4-1函数格式："><a href="#7-4-1函数格式：" class="headerlink" title="7.4.1函数格式："></a>7.4.1函数格式：</h5><p>str.strip([指定字符])</p>
 <h5 id="7-4-2返回值："><a href="#7-4-2返回值：" class="headerlink" title="7.4.2返回值："></a>7.4.2返回值：</h5><p>根据指定的字符，对字符串进行两端去除其内容，返回一个新的字符串。如果字符串中间有空格或指定字符，那么该函数不起作用。如果指定的字符在字符串左右两端不存在，那么将返回字符串本身。</p>
 <h4 id="例如：-4"><a href="#例如：-4" class="headerlink" title="例如："></a>例如：</h4><h5 id="7-4-3缺省情况"><a href="#7-4-3缺省情况" class="headerlink" title="7.4.3缺省情况"></a>7.4.3缺省情况</h5><p>交互式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ string1 = <span class="string">'  hello world  '</span></span><br><span class="line">$ string1.strip()</span><br><span class="line">$ <span class="string">'hello world'</span></span><br><span class="line">$ <span class="built_in">print</span>(string1)</span><br><span class="line">$ hello world</span><br></pre></td></tr></table></figure></p>
@@ -228,7 +228,7 @@
 <h3 id="9、连接符与重复操作符"><a href="#9、连接符与重复操作符" class="headerlink" title="9、连接符与重复操作符"></a>9、连接符与重复操作符</h3><h4 id="9-1-："><a href="#9-1-：" class="headerlink" title="9.1 +："></a>9.1 +：</h4><p>在字符串中使用时，作为连接两个字符串，并返回一个新字符串的作用来使用。</p>
 <h4 id="9-2-："><a href="#9-2-：" class="headerlink" title="9.2 *："></a>9.2 *：</h4><p>重复操作指定的次数，即将字符串重复输出N次。返回一个新字符串。</p>
 <h4 id="注意：-8"><a href="#注意：-8" class="headerlink" title="注意："></a>注意：</h4><p>在重复操作中，必须遵循：字符串*正整数这样的格式，如果数值不是正整数，其结果返回一个空字符串，如果不是数值类型，程序报错。</p>
-<h4 id="9-3in运算符"><a href="#9-3in运算符" class="headerlink" title="9.3in运算符"></a>9.3in运算符</h4><p>用来检测指定的内容，是否在字符串中，如果存在则返回True，反之返回False</p>
+<h4 id="9-3-in运算符"><a href="#9-3-in运算符" class="headerlink" title="9.3 in运算符"></a>9.3 in运算符</h4><p>用来检测指定的内容，是否在字符串中，如果存在则返回True，反之返回False</p>
 <p>#####例如:<br>交互式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ string1 = <span class="string">'hello world'</span></span><br><span class="line">$ substr = <span class="string">'e'</span></span><br><span class="line">$ substr <span class="keyword">in</span> string1</span><br><span class="line">$ True</span><br><span class="line">$ substr = <span class="string">'ll'</span></span><br><span class="line">$ substr <span class="keyword">in</span> string1</span><br><span class="line">$ True</span><br><span class="line">$ substr = <span class="string">'wr'</span></span><br><span class="line">$ substr <span class="keyword">in</span> string1</span><br><span class="line">$ False</span><br></pre></td></tr></table></figure></p>
 
       

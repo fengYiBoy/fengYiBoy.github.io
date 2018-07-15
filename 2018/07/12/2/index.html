@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="亦非亦的博客">
 <meta property="og:description" content="一、基础：1、编码：在开发过程，对应不同的语言使用不同的字符编码。英文    ISO-8859-1中文    gbk或gb2312目前Python为了统一编码格式，在3.0以上的版本使用了utf-8编码 2、print()函数2.1语法格式：print(value,…,sep=’ ‘,end=’\n’) 其中，value代表我们要输出的内容，可以是字符串，可以是数值等内容      sep代表输出">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-15T11:32:07.864Z">
+<meta property="og:updated_time" content="2018-07-15T11:55:53.937Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基础语法">
 <meta name="twitter:description" content="一、基础：1、编码：在开发过程，对应不同的语言使用不同的字符编码。英文    ISO-8859-1中文    gbk或gb2312目前Python为了统一编码格式，在3.0以上的版本使用了utf-8编码 2、print()函数2.1语法格式：print(value,…,sep=’ ‘,end=’\n’) 其中，value代表我们要输出的内容，可以是字符串，可以是数值等内容      sep代表输出">
@@ -166,8 +166,8 @@
 <h3 id="2、print-函数"><a href="#2、print-函数" class="headerlink" title="2、print()函数"></a>2、print()函数</h3><h4 id="2-1语法格式："><a href="#2-1语法格式：" class="headerlink" title="2.1语法格式："></a>2.1语法格式：</h4><p>print(value,…,sep=’ ‘,end=’\n’)</p>
 <p>其中，value代表我们要输出的内容，可以是字符串，可以是数值等内容<br>      sep代表输出多个值之间的间隔符，默认使用空格隔开。我们可以重新定义间隔符，比如采用：#、，等；<br>      end代表输出语句的结束标识，默认使用了换行，我们可以重新定义其他内容，其输出的内容将不再进行换行操作。</p>
 <h3 id="3、print-函数的基本使用"><a href="#3、print-函数的基本使用" class="headerlink" title="3、print()函数的基本使用"></a>3、print()函数的基本使用</h3><h4 id="3-1print-常用输出方式："><a href="#3-1print-常用输出方式：" class="headerlink" title="3.1print()常用输出方式："></a>3.1print()常用输出方式：</h4><p>print(‘hello ‘)、print(123456)等</p>
-<h4 id="3-2参数格式输出"><a href="#3-2参数格式输出" class="headerlink" title="3.2参数格式输出"></a>3.2参数格式输出</h4><h4 id="3-3s：代表了字符串内容，其中"><a href="#3-3s：代表了字符串内容，其中" class="headerlink" title="3.3s：代表了字符串内容，其中"></a>3.3s：代表了字符串内容，其中</h4><p>print(‘welcome %s’%Beijing)=&gt;welcome Beijing<br>print(‘welcome %10.3s’%Beijing)=&gt;welcome       Bei,输出结果为10个字符其中包含字符串Beijing中前三个，其余用空格填充</p>
-<h4 id="3-4-d：代表了整数内容，其中"><a href="#3-4-d：代表了整数内容，其中" class="headerlink" title="3.4%d：代表了整数内容，其中"></a>3.4%d：代表了整数内容，其中</h4><p>print(‘price %d’%10)=&gt;price 10<br>print(‘price %d’%10.5) =&gt; price 10<br>print(‘price %3d’%10000)=&gt; price 10000</p>
+<h4 id="3-2参数格式输出"><a href="#3-2参数格式输出" class="headerlink" title="3.2参数格式输出"></a>3.2参数格式输出</h4><h4 id="3-3-s：代表了字符串内容，其中"><a href="#3-3-s：代表了字符串内容，其中" class="headerlink" title="3.3 s：代表了字符串内容，其中"></a>3.3 s：代表了字符串内容，其中</h4><p>print(‘welcome %s’%Beijing)=&gt;welcome Beijing<br>print(‘welcome %10.3s’%Beijing)=&gt;welcome       Bei,输出结果为10个字符其中包含字符串Beijing中前三个，其余用空格填充</p>
+<h4 id="3-4-d：代表了整数内容，其中"><a href="#3-4-d：代表了整数内容，其中" class="headerlink" title="3.4% d：代表了整数内容，其中"></a>3.4% d：代表了整数内容，其中</h4><p>print(‘price %d’%10)=&gt;price 10<br>print(‘price %d’%10.5) =&gt; price 10<br>print(‘price %3d’%10000)=&gt; price 10000</p>
 <h4 id="3-5注意"><a href="#3-5注意" class="headerlink" title="3.5注意:"></a>3.5注意:</h4><p>（1）这里面的3d表示输出一个宽度为3个单元的数值，如果数值长度小于三，那么数值靠右对齐。<br>-3d表示，数值反向对齐（靠左对齐）<br>（2）%f：代表了浮点数内容(注意，在Python中浮点数是一个近似值，所以结果也是近似)<br>print(‘price %f’%10.2)=&gt;10.200000<br>print(‘price %.1f’%10.2) =&gt; 10.2<br>print(‘prince %.1f’%10.58) = &gt;10.6<br> 当取一位小数位的时候，将小数位第二位进行舍入操作，但是Python的中间值不是5，导致当小数位第二位是5时，直接被舍去<br>print(‘%5.1f’%10.3) =&gt; 10.3<br>输出一个宽度为5的单位，其中整数3位，小数部分1位，小数点占一位</p>
 <h3 id="4、格式化输出"><a href="#4、格式化输出" class="headerlink" title="4、格式化输出"></a>4、格式化输出</h3><p>1）在Python3.0之后，推荐使用{0}来代替前期的%d,%s,%f等一系列的格式化参数，采用了字符串的format函数进行处理。写法如下：<br>2）print(‘welcome {0}同学，加入{1}班级’.format(‘tom’,’Python3班’))<br>其中{0}，{1}分别映射format()中的’tom’和’Python3班’，如果前面占位符中的索引值变化，那么他们映射的值也随之变化</p>
 <h3 id="5、变量"><a href="#5、变量" class="headerlink" title="5、变量"></a>5、变量</h3><h4 id="5-1变量的声明："><a href="#5-1变量的声明：" class="headerlink" title="5.1变量的声明："></a>5.1变量的声明：</h4><p>在Python没有变量类型，直接进行变量的声明，比如：i = 10</p>

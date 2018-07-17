@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="亦非亦的博客">
 <meta property="og:description" content="**注意[::]此为缺省状态 1、常见的数据类型：整型浮点型布尔型复数型字符串型我们工作中常用到整型、字符串 2、整型我们通常根据计算机中数据编码格式，将整型分为：二进制、八进制、十进制、十六进制四种类型。 2.1进制间的转换二进制转十进制：bin(int)=&amp;gt;将十进制转为二进制   int(bin)=&amp;gt;将二进制转为十进制八进制转十进制：oct(int)=&amp;gt;将十进制转为八进制">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-15T23:22:47.532Z">
+<meta property="og:updated_time" content="2018-07-16T13:21:39.055Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二、数据类型">
 <meta name="twitter:description" content="**注意[::]此为缺省状态 1、常见的数据类型：整型浮点型布尔型复数型字符串型我们工作中常用到整型、字符串 2、整型我们通常根据计算机中数据编码格式，将整型分为：二进制、八进制、十进制、十六进制四种类型。 2.1进制间的转换二进制转十进制：bin(int)=&amp;gt;将十进制转为二进制   int(bin)=&amp;gt;将二进制转为十进制八进制转十进制：oct(int)=&amp;gt;将十进制转为八进制">
@@ -206,7 +206,7 @@
 <h3 id="7-1-1函数格式："><a href="#7-1-1函数格式：" class="headerlink" title="7.1.1函数格式："></a>7.1.1函数格式：</h3><p>index(子字符串[,开始索引位，结束索引位])</p>
 <h3 id="7-1-2返回值："><a href="#7-1-2返回值：" class="headerlink" title="7.1.2返回值："></a>7.1.2返回值：</h3><p>如果找到指定的字符串，则返回其索引位；如果找不到就报错ValueError</p>
 <h2 id="7-2-find-与index-函数的区别"><a href="#7-2-find-与index-函数的区别" class="headerlink" title="7.2 find()与index()函数的区别"></a>7.2 find()与index()函数的区别</h2><p>第一，两者在执行结果时类似的，如果找到指定的字符就会返回其索引位<br>第二，find()如果找不到指定的字符时，返回-1；而index()找不到指定的字符，raise ValueError.<br>第三，从效率上来讲，index的查询速度要优于find,因为在python中对于像字符串这样的有序数据类型，会产生一个索引对象来自动维护其序列，find()函数不管是否有这样的序列，都需要在字符串本身进行逐一查找，而index()会通过这个索引对象的映射方式，来快速找到对应的索引位。</p>
-<h2 id="7-3-plit-拆分字符串"><a href="#7-3-plit-拆分字符串" class="headerlink" title="7.3 plit() 拆分字符串"></a>7.3 plit() 拆分字符串</h2><h3 id="7-3-1函数格式："><a href="#7-3-1函数格式：" class="headerlink" title="7.3.1函数格式："></a>7.3.1函数格式：</h3><p>str.split([分隔符])</p>
+<h2 id="7-3-split-拆分字符串"><a href="#7-3-split-拆分字符串" class="headerlink" title="7.3 split() 拆分字符串"></a>7.3 split() 拆分字符串</h2><h3 id="7-3-1函数格式："><a href="#7-3-1函数格式：" class="headerlink" title="7.3.1函数格式："></a>7.3.1函数格式：</h3><p>str.split([分隔符])</p>
 <h3 id="7-3-2返回值："><a href="#7-3-2返回值：" class="headerlink" title="7.3.2返回值："></a>7.3.2返回值：</h3><p>根据指定的分隔符，对字符串进行拆分，返回一个列表；如果不指定分隔符，那么会将整个字符串，作为列表的一个元素。</p>
 <h4 id="例如：-3"><a href="#例如：-3" class="headerlink" title="*例如："></a>*例如：</h4><p>交互式:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ string1 = <span class="string">'tv,pc,notebook,phone'</span></span><br><span class="line">$ string1.split(<span class="string">','</span>)</span><br><span class="line">$ [<span class="string">'tv'</span>, <span class="string">'pc'</span>, <span class="string">'notebook'</span>, <span class="string">'phone'</span>]</span><br><span class="line">$ string1.split()</span><br><span class="line">$ [<span class="string">'tv,pc,notebook,phone'</span>]</span><br></pre></td></tr></table></figure></p>
 <h4 id="注意：-5"><a href="#注意：-5" class="headerlink" title="*注意："></a>*注意：</h4><p>split中的分隔符，我们根据字符串中的实际情况而定。如果使用了不正确的分隔符，str.split(‘错误分隔符’)操作结果str.split(),会将整个字符串作为列表的一个元素。</p>

@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 亦非亦的博客</title>
+  <title>精选案例题 | 亦非亦的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="亦非亦的博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="1、输出商品列表，用户输入序号，显示用户选中的商品商品 li = [“手机”, “电脑”, ‘鼠标垫’, ‘游艇’]1234567891011121314151617181920212223# 要求：1：页面显示 序号 + 商品名称，如：#          1 手机#          2 电脑#              …#       2： 用户输入选择的商品序号，然后打印商品名称#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="精选案例题">
+<meta property="og:url" content="http://yoursite.com/2018/07/18/9/index.html">
 <meta property="og:site_name" content="亦非亦的博客">
+<meta property="og:description" content="1、输出商品列表，用户输入序号，显示用户选中的商品商品 li = [“手机”, “电脑”, ‘鼠标垫’, ‘游艇’]1234567891011121314151617181920212223# 要求：1：页面显示 序号 + 商品名称，如：#          1 手机#          2 电脑#              …#       2： 用户输入选择的商品序号，然后打印商品名称#">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-18T11:29:08.200Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="亦非亦的博客">
+<meta name="twitter:title" content="精选案例题">
+<meta name="twitter:description" content="1、输出商品列表，用户输入序号，显示用户选中的商品商品 li = [“手机”, “电脑”, ‘鼠标垫’, ‘游艇’]1234567891011121314151617181920212223# 要求：1：页面显示 序号 + 商品名称，如：#          1 手机#          2 电脑#              …#       2： 用户输入选择的商品序号，然后打印商品名称#">
   
     <link rel="alternative" href="/atom.xml" title="亦非亦的博客" type="application/atom+xml">
   
@@ -142,274 +146,177 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-9" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      精选案例题
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/18/9/" class="archive-article-date">
+
+        
+        <a href="/2018/07/18/9/" class="archive-article-date">
   	<time datetime="2018-07-18T06:17:42.627Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-18</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/18/9/">精选案例题</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1、"><a href="#1、" class="headerlink" title="1、"></a>1、</h1><p>输出商品列表，用户输入序号，显示用户选中的商品<br>商品 li = [“手机”, “电脑”, ‘鼠标垫’, ‘游艇’]<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 要求：1：页面显示 序号 + 商品名称，如：</span></span><br><span class="line"><span class="comment">#          1 手机</span></span><br><span class="line"><span class="comment">#          2 电脑</span></span><br><span class="line"><span class="comment">#              …</span></span><br><span class="line"><span class="comment">#       2： 用户输入选择的商品序号，然后打印商品名称</span></span><br><span class="line"><span class="comment">#       3：如果用户输入的商品序号有误，则提示输入有误，并重新输入。</span></span><br><span class="line"><span class="comment">#       4：用户输入Q或者q，退出程序。</span></span><br><span class="line">li = [<span class="string">"手机"</span>, <span class="string">"电脑"</span>, <span class="string">'鼠标垫'</span>, <span class="string">'游艇'</span>]</span><br><span class="line">list1 = [(i+1,li[i]) <span class="keyword">for</span> i <span class="keyword">in</span> range(len(li))]</span><br><span class="line">dic1 = dict(list1)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'以下是我们这的商品：'</span>)</span><br><span class="line">[<span class="built_in">print</span>(i,dic1[i]) <span class="keyword">for</span> i <span class="keyword">in</span> dic1]</span><br><span class="line">str2 =[str(i) <span class="keyword">for</span> i <span class="keyword">in</span> dic1] </span><br><span class="line"><span class="keyword">while</span> True:</span><br><span class="line">    users_words = input(<span class="string">'请输入商品序号，按Q或q退出程序'</span>)</span><br><span class="line">    <span class="keyword">if</span> users_words <span class="keyword">in</span> str2:</span><br><span class="line">        <span class="built_in">print</span>(dic1[int(users_words)])</span><br><span class="line">        <span class="built_in">continue</span></span><br><span class="line">    <span class="keyword">elif</span> users_words == <span class="string">'q'</span> or users_words == <span class="string">'Q'</span>:</span><br><span class="line">        <span class="built_in">break</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'输入错误，请重新输入'</span>)</span><br></pre></td></tr></table></figure></p>
+<h1 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">goods_dic = &#123;</span><br><span class="line">    <span class="string">'10001'</span>:<span class="string">'电视机'</span>,</span><br><span class="line">    <span class="string">'10002'</span>:<span class="string">'手机'</span></span><br><span class="line">&#125;  <span class="comment">#已上架商品列表，包括‘商品序号’和‘商品名称’。</span></span><br><span class="line"><span class="keyword">while</span> True:</span><br><span class="line">    users_input =input(<span class="string">'请输入商品序号，按Q或q退出程序'</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="string">'Q'</span> == users_input or <span class="string">'q'</span> == users_input:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'您已退出。'</span>)</span><br><span class="line">        <span class="built_in">break</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">if</span> users_input <span class="keyword">in</span> goods_dic.keys():</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">'序号   商品名称'</span>)</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">'&#123;0&#125;    &#123;1&#125; '</span>.format(users_input,goods_dic[users_input]))</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">'你输入的商品序号有误，请重新输入：'</span>)</span><br></pre></td></tr></table></figure>
+      
 
-        <div class="article-info info-on-right">
-          
-          
-
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/18/9/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
 
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/18/8/" class="archive-article-date">
-  	<time datetime="2018-07-18T01:14:37.021Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-18</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/18/8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">七、组合数据类型3</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/18/8/">七、组合数据类型3</a>
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
 
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/17/7/" class="archive-article-date">
-  	<time datetime="2018-07-17T00:49:26.554Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/17/7/">六、组合数据类型2</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/16/6/" class="archive-article-date">
-  	<time datetime="2018-07-16T08:58:38.681Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/16/6/">五、在hexo下的yilia主题中添加 访客总量 显示功能</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/15/5/" class="archive-article-date">
-  	<time datetime="2018-07-15T07:14:16.560Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/15/5/">四、 组合数据类型1</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/13/4/" class="archive-article-date">
-  	<time datetime="2018-07-13T03:51:33.776Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/13/4/">三、控制语句</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/12/3/" class="archive-article-date">
-  	<time datetime="2018-07-12T01:32:48.955Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/12/3/">二、数据类型</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/12/2/" class="archive-article-date">
-  	<time datetime="2018-07-11T16:21:59.052Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/12/2/">一、基础语法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/11/1hello-world/" class="archive-article-date">
-  	<time datetime="2018-07-11T15:57:29.713Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/11/1hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="9" data-title="精选案例题" data-url="http://yoursite.com/2018/07/18/9/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -436,8 +343,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

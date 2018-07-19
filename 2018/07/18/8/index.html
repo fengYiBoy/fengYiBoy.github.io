@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="亦非亦的博客">
 <meta property="og:description" content="1、集合set1.1 集合的概念集合set是一个无序的数据集合，可以存储各种数据类型的元素，同时可以对集合中的元素进行新增、删除等操作，因此集合的长度是可变的。并且集合是不允许有重复元素，如果出现重复元素，除去第一个元素子之外，都会被集合所忽略。 * 注意：set是无序的，即存储元素到set的顺序与这些元素输出的顺序无关。set仍然是采用哈希算法，对这些元素进行存储的。 1.2 集合的声明与赋值1">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-18T11:28:57.836Z">
+<meta property="og:updated_time" content="2018-07-18T12:12:38.537Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="七、组合数据类型3">
 <meta name="twitter:description" content="1、集合set1.1 集合的概念集合set是一个无序的数据集合，可以存储各种数据类型的元素，同时可以对集合中的元素进行新增、删除等操作，因此集合的长度是可变的。并且集合是不允许有重复元素，如果出现重复元素，除去第一个元素子之外，都会被集合所忽略。 * 注意：set是无序的，即存储元素到set的顺序与这些元素输出的顺序无关。set仍然是采用哈希算法，对这些元素进行存储的。 1.2 集合的声明与赋值1">
@@ -209,8 +209,13 @@
 <h4 id="例如：-9"><a href="#例如：-9" class="headerlink" title="* 例如："></a>* 例如：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; set1 = &#123;1,2,3&#125;</span><br><span class="line">&gt;&gt;&gt; set2 = &#123;2,3,4,5&#125;</span><br><span class="line">&gt;&gt;&gt; set1.update(set2)</span><br><span class="line">&gt;&gt;&gt; set1</span><br><span class="line">&#123;1, 2, 3, 4, 5&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="4-2-intersection-update"><a href="#4-2-intersection-update" class="headerlink" title="4.2 intersection_update()"></a>4.2 intersection_update()</h2><h3 id="4-2-1-函数格式："><a href="#4-2-1-函数格式：" class="headerlink" title="4.2.1 函数格式："></a>4.2.1 函数格式：</h3><p>set1.intersection_uptdate(set2)</p>
 <h3 id="4-2-2-返回值："><a href="#4-2-2-返回值：" class="headerlink" title="4.2.2 返回值："></a>4.2.2 返回值：</h3><p>无</p>
-<h3 id="4-2-3-结果："><a href="#4-2-3-结果：" class="headerlink" title="4.2.3 结果："></a>4.2.3 结果：</h3><p>与update（）相反。</p>
-<h4 id="例如：-10"><a href="#例如：-10" class="headerlink" title="* 例如："></a>* 例如：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="4-2-3-结果："><a href="#4-2-3-结果：" class="headerlink" title="4.2.3 结果："></a>4.2.3 结果：</h3><p>我们使用set2中的元素，添加到set1中，其中，保留两个集合中相同的元素。其中，set1、set2中其他的元素被舍弃。</p>
+<h4 id="例如：-10"><a href="#例如：-10" class="headerlink" title="* 例如："></a>* 例如：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">set1 =&gt; &#123;<span class="string">'zh'</span>, <span class="string">'tw'</span>, <span class="string">'en'</span>&#125;</span><br><span class="line">set2 =&gt; &#123;<span class="string">'jp'</span>, <span class="string">'fr'</span>, <span class="string">'en'</span>&#125;</span><br><span class="line">set1.intersection_update(set2)</span><br><span class="line">set1 =&gt; &#123;<span class="string">'en'</span>&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="4-3-symmetric-difference-update"><a href="#4-3-symmetric-difference-update" class="headerlink" title="4.3 symmetric_difference_update()"></a>4.3 symmetric_difference_update()</h2><h3 id="4-3-1-函数格式："><a href="#4-3-1-函数格式：" class="headerlink" title="4.3.1 函数格式："></a>4.3.1 函数格式：</h3><p>symmetric_difference_update()</p>
+<h3 id="4-3-2-返回值："><a href="#4-3-2-返回值：" class="headerlink" title="4.3.2 返回值："></a>4.3.2 返回值：</h3><p>无</p>
+<h3 id="4-3-3-结果："><a href="#4-3-3-结果：" class="headerlink" title="4.3.3 结果："></a>4.3.3 结果：</h3><p>我们使用set1与set2进行运算，只保留两者除去相同元素之外的元素。</p>
+<h4 id="例如：-11"><a href="#例如：-11" class="headerlink" title="* 例如："></a>* 例如：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">set1 =&gt; &#123;<span class="string">'zh'</span>, <span class="string">'tw'</span>, <span class="string">'en'</span>&#125;</span><br><span class="line">set2 =&gt; &#123;<span class="string">'jp'</span>, <span class="string">'fr'</span>, <span class="string">'en'</span>&#125;</span><br><span class="line">set1.symmetric_difference_update(set2)</span><br><span class="line">set1 =&gt; &#123;<span class="string">'jp'</span>, <span class="string">'fr'</span>, <span class="string">'zh'</span>, <span class="string">'tw'</span>&#125;</span><br></pre></td></tr></table></figure>
+
       
 
       

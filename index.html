@@ -144,6 +144,139 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-12" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/20/12/">排序</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/20/12/" class="archive-article-date">
+  	<time datetime="2018-07-20T02:04:19.379Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1、sort"><a href="#1、sort" class="headerlink" title="1、sort()"></a>1、sort()</h1><p>函数提供排序功能，同时该排序实现了永久性排序，即会改变原有列表的元素位置。</p>
+<h1 id="2、sorted"><a href="#2、sorted" class="headerlink" title="2、sorted()"></a>2、sorted()</h1><p>python内置函数，进行临时性排序。返回一个新列表，不会改变原有列表元素位置。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/20/12/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
+    <article id="post-11" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/20/11/">两个值相同的列表地址的不同情况：</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/20/11/" class="archive-article-date">
+  	<time datetime="2018-07-20T01:35:36.631Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="声明："><a href="#声明：" class="headerlink" title="* 声明："></a>* 声明：</h4><p>1、赋值赋的都是内存地址，只要两者内存地址相同，改变其一，后者会随之而变。<br>2、两个值相同的常量内存地址相同，但两个值相同的列表内存地址不同，因为列表是变量。</p>
+<h1 id="1、给两个表分别付给相同的值："><a href="#1、给两个表分别付给相同的值：" class="headerlink" title="1、给两个表分别付给相同的值："></a>1、给两个表分别付给相同的值：</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ls1 = [1,2,3]</span><br><span class="line">ls2 = [1,2,3]</span><br><span class="line">ls1 == ls2</span><br><span class="line">True</span><br><span class="line">id(ls1) == id(ls2)</span><br><span class="line">False</span><br><span class="line"><span class="comment">#两者值相同地址不同</span></span><br></pre></td></tr></table></figure>
+<h1 id="2、先给ls1赋值，在把ls1赋给ls2（把ls1的内存地址给ls2）"><a href="#2、先给ls1赋值，在把ls1赋给ls2（把ls1的内存地址给ls2）" class="headerlink" title="2、先给ls1赋值，在把ls1赋给ls2（把ls1的内存地址给ls2）"></a>2、先给ls1赋值，在把ls1赋给ls2（把ls1的内存地址给ls2）</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ls1 = [1,2,3]</span><br><span class="line">ls2 = ls1</span><br><span class="line">ls1 == ls2</span><br><span class="line">True</span><br><span class="line">id(ls1) == id(ls2)</span><br><span class="line">True</span><br><span class="line"><span class="comment">#两者值相同地址也想通</span></span><br></pre></td></tr></table></figure>
+<h1 id="3、-copy"><a href="#3、-copy" class="headerlink" title="3、 copy()"></a>3、 copy()</h1><p>浅拷贝：只适用一维列表。<br>copy的是值，而不是内存地址，当copy到二维时，copy的是其地址。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ls1 = [1,2,3,[4,5]]</span><br><span class="line">ls2 = ls1.copy()</span><br><span class="line">ls1 == ls2</span><br><span class="line">True</span><br><span class="line">id(ls1) == id(ls2)</span><br><span class="line">False</span><br><span class="line">id(ls1[3]) == id(ls2[3])</span><br><span class="line">True</span><br><span class="line"><span class="comment">#两者值相同，一维内存地址不相同；但二维地址相同。</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="4、-deepcopy"><a href="#4、-deepcopy" class="headerlink" title="4、 deepcopy()"></a>4、 deepcopy()</h1><p>深拷贝：适用多维列表<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ls1 = [1,2,3,[4,5]]</span><br><span class="line">ls2 = ls1.copy.deepcopy()</span><br><span class="line">ls1 == ls2</span><br><span class="line">True</span><br><span class="line">id(ls1) == id(ls2)</span><br><span class="line">False</span><br><span class="line">id(ls1[3]) == id(ls2[3])</span><br><span class="line">False</span><br><span class="line"><span class="comment">#两者值相同，一维地址不相同，二维地址不相同，改变ls1，ls2值不会随之而变。</span></span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/20/11/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
     <article id="post-10" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -910,160 +1043,10 @@
 
 
   
-    <article id="post-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/12/2/">一、基础语法</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/12/2/" class="archive-article-date">
-  	<time datetime="2018-07-11T16:21:59.052Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="1、编码："><a href="#1、编码：" class="headerlink" title="1、编码："></a>1、编码：</h1><p>在开发过程，对应不同的语言使用不同的字符编码。<br>英文    ISO-8859-1<br>中文    gbk或gb2312<br>目前Python为了统一编码格式，在3.0以上的版本使用了utf-8编码</p>
-<h1 id="2、print-函数"><a href="#2、print-函数" class="headerlink" title="2、print()函数"></a>2、print()函数</h1><h2 id="2-1语法格式："><a href="#2-1语法格式：" class="headerlink" title="2.1语法格式："></a>2.1语法格式：</h2><p>print(value,…,sep=’ ‘,end=’\n’)</p>
-<p>其中，value代表我们要输出的内容，可以是字符串，可以是数值等内容<br>      sep代表输出多个值之间的间隔符，默认使用空格隔开。我们可以重新定义间隔符，比如采用：#、，等；<br>      end代表输出语句的结束标识，默认使用了换行，我们可以重新定义其他内容，其输出的内容将不再进行换行操作。</p>
-<h1 id="3、print-函数的基本使用"><a href="#3、print-函数的基本使用" class="headerlink" title="3、print()函数的基本使用"></a>3、print()函数的基本使用</h1><h2 id="3-1print-常用输出方式："><a href="#3-1print-常用输出方式：" class="headerlink" title="3.1print()常用输出方式："></a>3.1print()常用输出方式：</h2><p>print(‘hello ‘)、print(123456)等</p>
-<h2 id="3-2参数格式输出"><a href="#3-2参数格式输出" class="headerlink" title="3.2参数格式输出"></a>3.2参数格式输出</h2><h3 id="3-2-1-s：代表了字符串内容，其中"><a href="#3-2-1-s：代表了字符串内容，其中" class="headerlink" title="3.2.1 %s：代表了字符串内容，其中"></a>3.2.1 %s：代表了字符串内容，其中</h3><p>print(‘welcome %s’%Beijing)=&gt;welcome Beijing<br>print(‘welcome %10.3s’%Beijing)=&gt;welcome       Bei,输出结果为10个字符其中包含字符串Beijing中前三个，其余用空格填充</p>
-<h3 id="3-2-2-d：代表了整数内容，其中"><a href="#3-2-2-d：代表了整数内容，其中" class="headerlink" title="3.2.2 %d：代表了整数内容，其中"></a>3.2.2 %d：代表了整数内容，其中</h3><p>print(‘price %d’%10)=&gt;price 10<br>print(‘price %d’%10.5) =&gt; price 10<br>print(‘price %3d’%10000)=&gt; price 10000</p>
-<h4 id="注意"><a href="#注意" class="headerlink" title="*注意:"></a>*注意:</h4><p>（1）这里面的3d表示输出一个宽度为3个单元的数值，如果数值长度小于三，那么数值靠右对齐。<br>-3d表示，数值反向对齐（靠左对齐）<br>（2）%f：代表了浮点数内容(注意，在Python中浮点数是一个近似值，所以结果也是近似)<br>print(‘price %f’%10.2)=&gt;10.200000<br>print(‘price %.1f’%10.2) =&gt; 10.2<br>print(‘prince %.1f’%10.58) = &gt;10.6<br> 当取一位小数位的时候，将小数位第二位进行舍入操作，但是Python的中间值不是5，导致当小数位第二位是5时，直接被舍去<br>print(‘%5.1f’%10.3) =&gt; 10.3<br>输出一个宽度为5的单位，其中整数3位，小数部分1位，小数点占一位</p>
-<h1 id="4、格式化输出"><a href="#4、格式化输出" class="headerlink" title="4、格式化输出"></a>4、格式化输出</h1><p>1）在Python3.0之后，推荐使用{0}来代替前期的%d,%s,%f等一系列的格式化参数，采用了字符串的format函数进行处理。写法如下：<br>2）print(‘welcome {0}同学，加入{1}班级’.format(‘tom’,’Python3班’))<br>其中{0}，{1}分别映射format()中的’tom’和’Python3班’，如果前面占位符中的索引值变化，那么他们映射的值也随之变化</p>
-<h1 id="5、变量"><a href="#5、变量" class="headerlink" title="5、变量"></a>5、变量</h1><h2 id="5-1变量的声明："><a href="#5-1变量的声明：" class="headerlink" title="5.1变量的声明："></a>5.1变量的声明：</h2><p>在Python没有变量类型，直接进行变量的声明，比如：i = 10</p>
-<h2 id="5-2变量的赋值："><a href="#5-2变量的赋值：" class="headerlink" title="5.2变量的赋值："></a>5.2变量的赋值：</h2><p>在python中，有两种赋值方式<br>第一种，单个变量赋值  name = ‘tom’<br>第二种，多个变量同时赋值  name, age, sex = ‘tom’， 23， ‘男’</p>
-<h1 id="6、变量在内存中的存在情况"><a href="#6、变量在内存中的存在情况" class="headerlink" title="6、变量在内存中的存在情况"></a>6、变量在内存中的存在情况</h1><h2 id="6-1"><a href="#6-1" class="headerlink" title="6.1"></a>6.1</h2><p>python中的变量，在声明和赋值时，不仅声明了变量的名字同时还为这个变量指向了内存中的地址，该地址用来存储变量的值。</p>
-<h2 id="6-2"><a href="#6-2" class="headerlink" title="6.2"></a>6.2</h2><p>python中整数、字符串、浮点数等其本身都属于常量，所以当赋值给一个变量时，</p>
-<h4 id="例如："><a href="#例如：" class="headerlink" title="*例如："></a>*例如：</h4><p>i = 10意味着将10这个常量在内存中的地址指向，因此，i = 10 ，j = 10 使用id(i),id(j）我们法向他们的id是相同的。<br>因为，他们的值10在内存中的地址是相同的。</p>
-<h2 id="6-3变量与内存地址"><a href="#6-3变量与内存地址" class="headerlink" title="6.3变量与内存地址"></a>6.3变量与内存地址</h2><p>当我们声明一个变量时，对其进行赋值。实际上就是将变量值所在的内存地址，赋值给该变量。也就是说这个变量指向其值所在的内存地址。<br>当我们改变变量的值的时候，说白了就是将变量指向的内存地址进行变化。</p>
-<h4 id="例如：i-2"><a href="#例如：i-2" class="headerlink" title="*例如：i = 2"></a>*例如：i = 2</h4><p>系统在读这句话时，首先会给常量’2‘在堆里面分配一个内存地址，然后把常量’2‘的内存地址给’i’。这时，‘i’指向’2‘的内存地址。</p>
-<h1 id="7、变量与常量"><a href="#7、变量与常量" class="headerlink" title="7、变量与常量"></a>7、变量与常量</h1><h2 id="7-1变量："><a href="#7-1变量：" class="headerlink" title="7.1变量："></a>7.1变量：</h2><p>我们认为其内容是临时结果，可变的。供后续的程序代码进行调用。</p>
-<h2 id="7-2常量："><a href="#7-2常量：" class="headerlink" title="7.2常量："></a>7.2常量：</h2><p>我们认为其内容是不变的，或者在程序运行的过程中也不发生改变。<br>在Python中，我们通过大写变量名，来表明这是一个常量，比如：CARDID = ‘12048377293’</p>
-<h2 id="7-3变量命名规则"><a href="#7-3变量命名规则" class="headerlink" title="7.3变量命名规则"></a>7.3变量命名规则</h2><p>首先，Python中的变量命名，必须由字母、数字或下划线三者组成，不能有其他的字符出现<br>其次，变量名的首个字符，必须是字母或下划线<br>然后，Python中的关键字不能作为变量名来使用，常用的关键字诸如：if,for,is,none等等。<br>Python是严格区分大小写的语言，其中A = 10 ，a = 10。我们认为这是两个不同的变量</p>
-<h2 id="7-4一般变量有两种命名方式："><a href="#7-4一般变量有两种命名方式：" class="headerlink" title="7.4一般变量有两种命名方式："></a>7.4一般变量有两种命名方式：</h2><p>（1）驼峰体<br>userName = ‘sam’<br>passWord = 123<br>（2）下划线<br>user_name = ‘sam’<br>number_of_students = 100<br>推荐使用下划线的方式定义变量名</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/12/2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-    <article id="post-1hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/11/1hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/11/1hello-world/" class="archive-article-date">
-  	<time datetime="2018-07-11T15:57:29.713Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/11/1hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 

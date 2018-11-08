@@ -144,6 +144,357 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/15/5/">四、 组合数据类型1</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/15/5/" class="archive-article-date">
+  	<time datetime="2018-07-15T07:14:16.560Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="列表常用函数："><a href="#列表常用函数：" class="headerlink" title="***列表常用函数："></a><strong><strong>***</strong></strong>列表常用函数：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">$ list2 = []</span><br><span class="line">$ list1 = [1,3,4,5,666666]</span><br><span class="line">$ list1[2] = 2    <span class="comment">#修改列表索引为2的元素的值</span></span><br><span class="line">$ list1.insert(2,0)<span class="comment">#在指定索引位(2)插入元素</span></span><br><span class="line">$ list1.append(4222)<span class="comment">#在最后面追加指定元素</span></span><br><span class="line">$ list1.extend([1,3,5])<span class="comment">#在最后面追加指定列表（作为一个元素）</span></span><br><span class="line">$ list1.remove(1)<span class="comment">#移除指定元素</span></span><br><span class="line">$ list1.pop() <span class="comment">#弹出最后一个元素，有返回值</span></span><br><span class="line">$ list1.pop(1)<span class="comment">#弹出指定索引位元素</span></span><br><span class="line">$ del list1[1] <span class="comment">#删除指定索引位的元素</span></span><br><span class="line">$ list1.clear()</span><br><span class="line">$ del list1 <span class="comment">#删除指定列表,同时释放该列表所占用的内存空间</span></span><br><span class="line">$ del list1[3:5]<span class="comment">#删除指定片段从索引位3删除遇见索引位5结束（索引位5不删除）</span></span><br><span class="line">$</span><br><span class="line">$ list2 = [1,2,3,4,5,6,7,8,9]</span><br><span class="line">$ <span class="built_in">print</span>(<span class="string">'这个列表的长度是：&#123;0&#125;'</span>.format(len(list2)))   <span class="comment">#输出列表的长度</span></span><br><span class="line">$ <span class="keyword">for</span> i <span class="keyword">in</span> list2: </span><br><span class="line">$     <span class="built_in">print</span>(<span class="string">' \'</span>&#123;0&#125;\<span class="string">' 这个元素的长度是：&#123;1&#125;'</span>.format(i,len(str(i))))</span><br><span class="line">$ <span class="keyword">for</span> j <span class="keyword">in</span> range(0,9):</span><br><span class="line">$     <span class="built_in">print</span>(list2[j],end = <span class="string">','</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="1、List列表"><a href="#1、List列表" class="headerlink" title="1、List列表"></a>1、List列表</h1><h2 id="1-1概念："><a href="#1-1概念：" class="headerlink" title="1.1概念："></a>1.1概念：</h2><p>List数据，首先它可以存储各种数据类型，比如：数值、字符串、布尔型等等；其次，列表中的元素可以随时进行删除、修改、增加，其长度随之变化；同时，列表也是有序的，我们同样可以使用循环对其进行遍历。</p>
+<h2 id="1-2声明与赋值"><a href="#1-2声明与赋值" class="headerlink" title="1.2声明与赋值"></a>1.2声明与赋值</h2><h3 id="1-2-1声明列表同时进行赋值"><a href="#1-2-1声明列表同时进行赋值" class="headerlink" title="1.2.1声明列表同时进行赋值"></a>1.2.1声明列表同时进行赋值</h3><p>list1 = [1,2,3,4,5]<br>list2 = [‘one’,’two’,’three’]<br>list3 = [1,’two’,3,’four’]</p>
+<h4 id="例如："><a href="#例如：" class="headerlink" title="*例如："></a>*例如：</h4><p>我们通过观察，可以发现列表是有序的。那么通过for  in  方式可以对其进行快速遍历<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">for</span> item <span class="keyword">in</span> list1:</span><br><span class="line">$     <span class="built_in">print</span>(item,end=<span class="string">' '</span>)</span><br><span class="line">$ 1 2 3 4 5</span><br></pre></td></tr></table></figure></p>
+<h2 id="1-3声明一个空列表，后续进行添加元素"><a href="#1-3声明一个空列表，后续进行添加元素" class="headerlink" title="1.3声明一个空列表，后续进行添加元素"></a>1.3声明一个空列表，后续进行添加元素</h2><p>list1 = list()   此时，python会生成一个空列表,即：[]</p>
+<h3 id="注意："><a href="#注意：" class="headerlink" title="*注意："></a>*注意：</h3><p>生成的这个空列表中没有任何值，它的长度为0</p>
+<h1 id="2、列表的操作"><a href="#2、列表的操作" class="headerlink" title="2、列表的操作"></a>2、列表的操作</h1><h2 id="2-1增加元素"><a href="#2-1增加元素" class="headerlink" title="2.1增加元素"></a>2.1增加元素</h2><h2 id="2-2使用append-函数，"><a href="#2-2使用append-函数，" class="headerlink" title="2.2使用append()函数，"></a>2.2使用append()函数，</h2><p>在列表的尾部追加一个新元素。</p>
+<h3 id="2-2-1函数格式："><a href="#2-2-1函数格式：" class="headerlink" title="2.2.1函数格式："></a>2.2.1函数格式：</h3><p>list.append(元素)</p>
+<h3 id="2-2-2返回值："><a href="#2-2-2返回值：" class="headerlink" title="2.2.2返回值："></a>2.2.2返回值：</h3><p>列表长度+1</p>
+<h4 id="例如：-1"><a href="#例如：-1" class="headerlink" title="*例如："></a>*例如：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ list1.append(6)</span><br><span class="line">$ [1, 2, 3, 4, 5, 6]</span><br></pre></td></tr></table></figure>
+<p>####* 注意:<br>该方法添加元素都是在列表的尾部。</p>
+<h2 id="2-3第二种，使用extend-函数，"><a href="#2-3第二种，使用extend-函数，" class="headerlink" title="2.3第二种，使用extend()函数，"></a>2.3第二种，使用extend()函数，</h2><p>在列表尾部，追加一个子列表内容</p>
+<h3 id="2-3-1函数格式："><a href="#2-3-1函数格式：" class="headerlink" title="2.3.1函数格式："></a>2.3.1函数格式：</h3><p>list.extend(子列表)</p>
+<h3 id="2-3-2返回值："><a href="#2-3-2返回值：" class="headerlink" title="2.3.2返回值："></a>2.3.2返回值：</h3><p>列表长度+n</p>
+<h4 id="例如：-2"><a href="#例如：-2" class="headerlink" title="*例如："></a>*例如：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sublist = [7,8,9]</span><br><span class="line">$ list1.extend(sublist)</span><br><span class="line">$ [1, 2, 3, 4, 5, 6, 7, 8, 9]</span><br></pre></td></tr></table></figure>
+<h2 id="2-4第三种，使用“-”运算"><a href="#2-4第三种，使用“-”运算" class="headerlink" title="2.4第三种，使用“+”运算:"></a>2.4第三种，使用“+”运算:</h2><p>连接两个列表，其结果会生成一个新的列表。同时原来两个列表不变。</p>
+<h4 id="例如：-3"><a href="#例如：-3" class="headerlink" title="*例如："></a>*例如：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ sublist=[7, 8, 9]</span><br><span class="line">$ list3=[1, 2, 3, 4, 5]</span><br><span class="line">$ <span class="built_in">print</span>(list3+sublis)</span><br><span class="line">$ [1, 2, 3, 4, 5, 7, 8, 9]</span><br><span class="line">$ <span class="built_in">print</span>(list3))</span><br><span class="line">$ [1, 2, 3, 4, 5]</span><br><span class="line">$ sublist</span><br><span class="line">$ [7, 8, 9]</span><br></pre></td></tr></table></figure>
+<h2 id="2-5第四种，使用insert-函"><a href="#2-5第四种，使用insert-函" class="headerlink" title="2.5第四种，使用insert()函:"></a>2.5第四种，使用insert()函:</h2><p>对列表指定位置进行插入操作。</p>
+<h3 id="2-5-1函数格式："><a href="#2-5-1函数格式：" class="headerlink" title="2.5.1函数格式："></a>2.5.1函数格式：</h3><p>list.insert(idx，元素),其中：idx代表要插入的索引位</p>
+<h3 id="2-5-2返回值："><a href="#2-5-2返回值：" class="headerlink" title="2.5.2返回值："></a>2.5.2返回值：</h3><p>列表长度+1<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ list1.insert(4,<span class="string">'four'</span>)</span><br><span class="line">$ [1, 2, 3, 4, <span class="string">'four'</span>, 5, 6, 7, 8, 9]</span><br></pre></td></tr></table></figure></p>
+<h4 id="注意：-1"><a href="#注意：-1" class="headerlink" title="*注意："></a>*注意：</h4><p>插入指定的索引位后，原索引位所在的元素下标+1<br>我们在实际使用的时候，通常会利用append或extend来实现元素的追加，而少用insert进行元素的插入。因为在频繁的插入操作，需要耗费大量的内存来维护列表的索引关系。</p>
+<h1 id="3、修改元素"><a href="#3、修改元素" class="headerlink" title="3、修改元素"></a>3、修改元素</h1><p>通过索引位，找到指定的列表元素，重新对其进行赋值即可完成修改操作。</p>
+<h4 id="例如：-4"><a href="#例如：-4" class="headerlink" title="*例如："></a>*例如：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ list1=&gt;[1, 2, 3]</span><br><span class="line">$ list1[2] = 5</span><br><span class="line">$ [1, 2, 5]</span><br></pre></td></tr></table></figure>
+<h1 id="4、删除元素"><a href="#4、删除元素" class="headerlink" title="4、删除元素"></a>4、删除元素</h1><h2 id="4-1第一种，remove"><a href="#4-1第一种，remove" class="headerlink" title="4.1第一种，remove()"></a>4.1第一种，remove()</h2><p>移除在列表中指定的元素</p>
+<h3 id="4-1-1函数格式："><a href="#4-1-1函数格式：" class="headerlink" title="4.1.1函数格式："></a>4.1.1函数格式：</h3><p>list.remove(元素)</p>
+<h3 id="4-1-2返回值："><a href="#4-1-2返回值：" class="headerlink" title="4.1.2返回值："></a>4.1.2返回值：</h3><p>移除元素后的列表，长度-1</p>
+<h2 id="4-2第二种，pop-有两种使用模式"><a href="#4-2第二种，pop-有两种使用模式" class="headerlink" title="4.2第二种，pop()有两种使用模式"></a>4.2第二种，pop()有两种使用模式</h2><p>list.pop()：默认模式，从列表的尾部弹出一个元素<br>返回值：返回所弹出的元素本身。如果列表已经为空，执行pop()程序会报错提示：列表为空。</p>
+<p>list.pop(idx):idx指定的下表索引位置。<br>此处pop()与remove()类似，但是区别在于pop()会将移除的元素返回。</p>
+<h2 id="4-3第三种，使用del"><a href="#4-3第三种，使用del" class="headerlink" title="4.3第三种，使用del"></a>4.3第三种，使用del</h2><p>删除指定的列表片段或列表本身</p>
+<p>del list[idx]        删除指定索引位对应的元素<br>del list             删除整个列表，同时释放该列表所占用的内存空间<br>del list[star:end]   删除指定的列表片段</p>
+<h2 id="4-4补充：-del与clear-的区别"><a href="#4-4补充：-del与clear-的区别" class="headerlink" title="4.4补充： del与clear()的区别"></a>4.4补充： del与clear()的区别</h2><p>del list VS list.clear()<br>1、del 可以将列表的内容进行删除，同时将列表所占内存进行释放。<br>2、clear()只是将列表中的内容进行清空，原列表内容为空。</p>
+<h1 id="5、-与-运算符"><a href="#5、-与-运算符" class="headerlink" title="5、+与*运算符"></a>5、+与*运算符</h1><h2 id="5-1"><a href="#5-1" class="headerlink" title="5.1 +"></a>5.1 +</h2><p>在列表中我们使用+运算符，可以将两个列表进行连接，生成一个新的列表。</p>
+<h4 id="比如："><a href="#比如：" class="headerlink" title="*比如："></a>*比如：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ list1 = [1,2,3]  list2 = [4,5,6]  list1+list2=&gt;[1,2,3,4,5,6]</span><br></pre></td></tr></table></figure>
+<h2 id="5-2使用-运算符，"><a href="#5-2使用-运算符，" class="headerlink" title="5.2使用*运算符，"></a>5.2使用*运算符，</h2><p>可以将目标列表的内容重复N次，并生成一个新的列表。</p>
+<h4 id="比如：-1"><a href="#比如：-1" class="headerlink" title="*比如："></a>*比如：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ list1 = [1,2,3] list1*2=&gt;[1,2,3,1,2,3]</span><br></pre></td></tr></table></figure>
+<h2 id="5-3-max-与min"><a href="#5-3-max-与min" class="headerlink" title="5.3 max()与min()"></a>5.3 max()与min()</h2><h3 id="5-3-1函数格式："><a href="#5-3-1函数格式：" class="headerlink" title="5.3.1函数格式："></a>5.3.1函数格式：</h3><p>max(list)、min(list)</p>
+<h3 id="5-3-2返回值："><a href="#5-3-2返回值：" class="headerlink" title="5.3.2返回值："></a>5.3.2返回值：</h3><p>返回该列表中最大值或最小值。</p>
+<h4 id="注意：-2"><a href="#注意：-2" class="headerlink" title="*注意："></a>*注意：</h4><p>该函数在使用时，必须要求所统计的列表中元素的数据类型要一致。不支持多数据类型，数值型根据数值本身大小取值，字符串类型根据字母的ASCII码值取值，布尔值根据对应的1、0取值。</p>
+<h2 id="5-4sum"><a href="#5-4sum" class="headerlink" title="5.4sum ()"></a>5.4sum ()</h2><h3 id="5-4-1函数格式："><a href="#5-4-1函数格式：" class="headerlink" title="5.4.1函数格式："></a>5.4.1函数格式：</h3><p>sum(list)</p>
+<h3 id="5-4-2返回值："><a href="#5-4-2返回值：" class="headerlink" title="5.4.2返回值："></a>5.4.2返回值：</h3><p>将列表中所用的数值进行求和运算，返回结果。注意，该函数只能用于数值型列表。</p>
+<h2 id="5-5-sort-排序"><a href="#5-5-sort-排序" class="headerlink" title="5.5 sort()排序"></a>5.5 sort()排序</h2><h3 id="5-5-1函数格式："><a href="#5-5-1函数格式：" class="headerlink" title="5.5.1函数格式："></a>5.5.1函数格式：</h3><p>list.sort()、list.sort(reverse=True)</p>
+<h3 id="5-5-2返回值："><a href="#5-5-2返回值：" class="headerlink" title="5.5.2返回值："></a>5.5.2返回值：</h3><p>默认情况下，将原列表中元素按照升序进行排序,<br>如果设置了反转参数为True，那么将原列表中的元素按照降序排列</p>
+<h2 id="5-6-sorted-排序"><a href="#5-6-sorted-排序" class="headerlink" title="5.6 sorted()排序"></a>5.6 sorted()排序</h2><h3 id="5-6-1函数格式："><a href="#5-6-1函数格式：" class="headerlink" title="5.6.1函数格式："></a>5.6.1函数格式：</h3><p>sorted(list)、sorted(list,reverse=True)</p>
+<h3 id="5-6-2返回值："><a href="#5-6-2返回值：" class="headerlink" title="5.6.2返回值："></a>5.6.2返回值：</h3><p>默认情况下，将原列表中元素按照升序进行排序,<br>如果设置了反转参数为True，那么将原列表中的元素按照降序排列</p>
+<h4 id="注意：-3"><a href="#注意：-3" class="headerlink" title="*注意："></a>*注意：</h4><p>上面两种排序函数，其中第一个属于列表自身的排序方法，而第二种属于python内置的排序方法，也就是说第二种可以应用在包括列表在内多种集合排序。</p>
+<h2 id="5-7-count-计数函数"><a href="#5-7-count-计数函数" class="headerlink" title="5.7 count()计数函数"></a>5.7 count()计数函数</h2><h3 id="5-7-1函数格式："><a href="#5-7-1函数格式：" class="headerlink" title="5.7.1函数格式："></a>5.7.1函数格式：</h3><p>list.count(元素)</p>
+<h3 id="5-7-2返回值："><a href="#5-7-2返回值：" class="headerlink" title="5.7.2返回值："></a>5.7.2返回值：</h3><p>返回指定元素在列表中出现的次数</p>
+<h2 id="5-8-in-关键字"><a href="#5-8-in-关键字" class="headerlink" title="5.8 in 关键字"></a>5.8 in 关键字</h2><p>判断指定的元素是否在列表中存在，如果存在返回True，否在返回False</p>
+<h2 id="5-9-index-检索函数"><a href="#5-9-index-检索函数" class="headerlink" title="5.9 index()检索函数"></a>5.9 index()检索函数</h2><h3 id="5-9-1函数格式："><a href="#5-9-1函数格式：" class="headerlink" title="5.9.1函数格式："></a>5.9.1函数格式：</h3><p>list.index(元素)</p>
+<h3 id="5-9-2返回值："><a href="#5-9-2返回值：" class="headerlink" title="5.9.2返回值："></a>5.9.2返回值：</h3><p>返回该元素在列表中的索引位置，如果不存在报错。</p>
+<h1 id="6、常用数据类型的转换"><a href="#6、常用数据类型的转换" class="headerlink" title="6、常用数据类型的转换"></a>6、常用数据类型的转换</h1><h2 id="6-1字符串转为整型："><a href="#6-1字符串转为整型：" class="headerlink" title="6.1字符串转为整型："></a>6.1字符串转为整型：</h2><p>int(str)</p>
+<h3 id="6-1-1函数格式："><a href="#6-1-1函数格式：" class="headerlink" title="6.1.1函数格式："></a>6.1.1函数格式：</h3><p>int(str)</p>
+<h3 id="6-1-2返回值："><a href="#6-1-2返回值：" class="headerlink" title="6.1.2返回值："></a>6.1.2返回值：</h3><h2 id="6-2将字符型数值转为整数"><a href="#6-2将字符型数值转为整数" class="headerlink" title="6.2将字符型数值转为整数"></a>6.2将字符型数值转为整数</h2><p>int(‘3’) =&gt; 3</p>
+<h2 id="6-3字符串转为浮点型"><a href="#6-3字符串转为浮点型" class="headerlink" title="6.3字符串转为浮点型:"></a>6.3字符串转为浮点型:</h2><p>float(str)</p>
+<h3 id="6-3-1函数格式："><a href="#6-3-1函数格式：" class="headerlink" title="6.3.1函数格式："></a>6.3.1函数格式：</h3><p>float(str)</p>
+<h3 id="6-3-2返回值："><a href="#6-3-2返回值：" class="headerlink" title="6.3.2返回值："></a>6.3.2返回值：</h3><h2 id="6-4将字符型浮点数转为浮点数"><a href="#6-4将字符型浮点数转为浮点数" class="headerlink" title="6.4将字符型浮点数转为浮点数"></a>6.4将字符型浮点数转为浮点数</h2><p>float(‘2.4’) =&gt; 2.4</p>
+<h2 id="6-5数值转为字符串："><a href="#6-5数值转为字符串：" class="headerlink" title="6.5数值转为字符串："></a>6.5数值转为字符串：</h2><p>str(int)、str(float)</p>
+<h3 id="6-5-1函数格式："><a href="#6-5-1函数格式：" class="headerlink" title="6.5.1函数格式："></a>6.5.1函数格式：</h3><p>str(int)、str(float)</p>
+<h3 id="6-5-2返回值："><a href="#6-5-2返回值：" class="headerlink" title="6.5.2返回值："></a>6.5.2返回值：</h3><h2 id="6-6将整数或浮点数，转为字符型数值"><a href="#6-6将整数或浮点数，转为字符型数值" class="headerlink" title="6.6将整数或浮点数，转为字符型数值"></a>6.6将整数或浮点数，转为字符型数值</h2><p>str(2) =&gt; ‘2 ‘    str(2.4) =&gt; ‘2.4’</p>
+<h2 id="6-7字符串转为列表："><a href="#6-7字符串转为列表：" class="headerlink" title="6.7字符串转为列表："></a>6.7字符串转为列表：</h2><p>list(str)</p>
+<h3 id="6-7-1函数格式："><a href="#6-7-1函数格式：" class="headerlink" title="6.7.1函数格式："></a>6.7.1函数格式：</h3><p>list(str)</p>
+<h3 id="6-7-2返回值："><a href="#6-7-2返回值：" class="headerlink" title="6.7.2返回值："></a>6.7.2返回值：</h3><p>将指定的字符串，按照元素顺序逐一转为列表<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ string1 = <span class="string">'hello world'</span></span><br><span class="line">$ list1 = list(string1)</span><br></pre></td></tr></table></figure></p>
+<h1 id="7、列表比较运算符操作"><a href="#7、列表比较运算符操作" class="headerlink" title="7、列表比较运算符操作"></a>7、列表比较运算符操作</h1><h2 id="7-1相当于列表使用普通的比较运算符"><a href="#7-1相当于列表使用普通的比较运算符" class="headerlink" title="7.1相当于列表使用普通的比较运算符"></a>7.1相当于列表使用普通的比较运算符</h2><p>import operator<br>operator.ge()         大于等于   &gt;=<br>operator.gt()         大于       &gt;<br>operator.eq()       等于         ==<br>operator.ne()        不等于      !=<br>operator.le()           小于等于 &lt;=<br>operator.lt()          小于      &lt;</p>
+<h3 id="7-1-1格式："><a href="#7-1-1格式：" class="headerlink" title="7.1.1格式："></a>7.1.1格式：</h3><p>operator.ge(列表1,列表2)</p>
+<h3 id="7-1-2返回值："><a href="#7-1-2返回值：" class="headerlink" title="7.1.2返回值："></a>7.1.2返回值：</h3><p>如果符合条件，返回True，反之，返回False</p>
+<h2 id="7-2拆分字符串：str-split-分隔符"><a href="#7-2拆分字符串：str-split-分隔符" class="headerlink" title="7.2拆分字符串：str.split(分隔符)"></a>7.2拆分字符串：str.split(分隔符)</h2><h3 id="7-2-1函数格式："><a href="#7-2-1函数格式：" class="headerlink" title="7.2.1函数格式："></a>7.2.1函数格式：</h3><p>str.split(分隔符)</p>
+<h3 id="7-2-2返回值："><a href="#7-2-2返回值：" class="headerlink" title="7.2.2返回值："></a>7.2.2返回值：</h3><p>将字符串，根据指定的分隔符，转换为列表<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ string1 = <span class="string">"锅包肉 肠粉 毛血旺 宫保鸡丁"</span></span><br><span class="line">$ list2 = string1.split(<span class="string">' '</span>)</span><br><span class="line">$ [<span class="string">'锅包肉'</span>, <span class="string">'肠粉'</span>, <span class="string">'毛血旺'</span>, <span class="string">'宫保鸡丁'</span>]</span><br></pre></td></tr></table></figure></p>
+<h2 id="7-3列表转为字符串：’分隔符’-join-list"><a href="#7-3列表转为字符串：’分隔符’-join-list" class="headerlink" title="7.3列表转为字符串：’分隔符’.join(list)"></a>7.3列表转为字符串：’分隔符’.join(list)</h2><h3 id="7-3-1函数格式"><a href="#7-3-1函数格式" class="headerlink" title="7.3.1函数格式:"></a>7.3.1函数格式:</h3><p>‘分隔符’.join(list)</p>
+<h3 id="7-3-2返回值："><a href="#7-3-2返回值：" class="headerlink" title="7.3.2返回值："></a>7.3.2返回值：</h3><p>将指定的列表中的元素，通过分隔符进行连接，转换为字符串<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ list2 = [<span class="string">'锅包肉'</span>, <span class="string">'肠粉'</span>, <span class="string">'毛血旺'</span>, <span class="string">'宫保鸡丁'</span>]</span><br><span class="line">$  <span class="string">' '</span>.join(list2)</span><br><span class="line">$ <span class="string">'锅包肉 肠粉 毛血旺 宫保鸡丁'</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="7-4冒泡排序"><a href="#7-4冒泡排序" class="headerlink" title="7.4冒泡排序"></a>7.4冒泡排序</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ list1 = [80,100,67,1,34,10]</span><br><span class="line">$ <span class="keyword">for</span> m <span class="keyword">in</span> range(len(list1)):</span><br><span class="line">$    <span class="keyword">for</span> n <span class="keyword">in</span> range(m+1,len(list1)):</span><br><span class="line">$         first = list1[m]</span><br><span class="line">$         second = list1[n]</span><br><span class="line">$         <span class="keyword">if</span> first &lt; second:</span><br><span class="line">$            list1[m] = list1[n]</span><br><span class="line">$             list1[n] = first</span><br><span class="line">$ <span class="built_in">print</span>(list1)</span><br></pre></td></tr></table></figure>
+<h1 id="8、Tuple元组"><a href="#8、Tuple元组" class="headerlink" title="8、Tuple元组"></a>8、Tuple元组</h1><h2 id="8-1元组的概念："><a href="#8-1元组的概念：" class="headerlink" title="8.1元组的概念："></a>8.1元组的概念：</h2><p>元组的值的有序序列，里面可以存储各种数据类型的元素。但是元组一旦被赋值后，其内容就不可被改变。</p>
+<h2 id="8-2声明与赋值"><a href="#8-2声明与赋值" class="headerlink" title="8.2声明与赋值"></a>8.2声明与赋值</h2><p>第一种，tup = a,b,c,d<br>第二种，tup = (a,b,c,d) 推荐使用该种声明方式。<br>第三种，tup = tuple() 声明一个空的元组对象</p>
+<h4 id="注意：-4"><a href="#注意：-4" class="headerlink" title="*注意："></a>*注意：</h4><p>元组在赋值时，且元素只有一个时，具体情况如下：<br>tuple1 = (1,)或tuple1 = 1,一定要在元素后面加上一个,号，与普通变量赋值进行区分。</p>
+<h2 id="8-3常用操作"><a href="#8-3常用操作" class="headerlink" title="8.3常用操作"></a>8.3常用操作</h2><p>+、*、in、遍历等等，参考列表。</p>
+<h2 id="8-4元组与列表转换"><a href="#8-4元组与列表转换" class="headerlink" title="8.4元组与列表转换"></a>8.4元组与列表转换</h2><p>元组转为列表：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ tuple1 = (1,2,3)</span><br><span class="line">$ list1 = list(tuple1)</span><br></pre></td></tr></table></figure></p>
+<p>列表转为元组<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ list1 = [1,2,3]</span><br><span class="line">$ tuple1 = tuple(list1)</span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/15/5/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
+    <article id="post-4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/13/4/">三、控制语句</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/13/4/" class="archive-article-date">
+  	<time datetime="2018-07-13T03:51:33.776Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1、条件语句"><a href="#1、条件语句" class="headerlink" title="1、条件语句"></a>1、条件语句</h1><h2 id="1-1单判断："><a href="#1-1单判断：" class="headerlink" title="1.1单判断："></a>1.1单判断：</h2><h3 id="1-1-1格式："><a href="#1-1-1格式：" class="headerlink" title="1.1.1格式："></a>1.1.1格式：</h3><p>if 条件:<br>   代码</p>
+<h2 id="1-2双分支："><a href="#1-2双分支：" class="headerlink" title="1.2双分支："></a>1.2双分支：</h2><h3 id="1-2-1格式："><a href="#1-2-1格式：" class="headerlink" title="1.2.1格式："></a>1.2.1格式：</h3><p>if 条件：<br>   代码<br>else:<br>   代码</p>
+<h2 id="1-3多分支："><a href="#1-3多分支：" class="headerlink" title="1.3多分支："></a>1.3多分支：</h2><p>格式：<br>if 条件：<br>   代码<br>elif 条件：<br>   代码<br>elif 条件：<br>   代码<br>…<br>else:<br>   代码</p>
+<h1 id="2、逻辑运算符：-and、or、not"><a href="#2、逻辑运算符：-and、or、not" class="headerlink" title="2、逻辑运算符： and、or、not"></a>2、逻辑运算符： and、or、not</h1><h2 id="2-1-and"><a href="#2-1-and" class="headerlink" title="2.1 and:"></a>2.1 and:</h2><p>左右两端都是布尔型，其结果也为布尔型。当左右两端的值都为True，其结果才为True，有一方为False，其结果一定为False。</p>
+<h2 id="2-2-or"><a href="#2-2-or" class="headerlink" title="2.2 or:"></a>2.2 or:</h2><p>左右两端都是布尔型，其结果也为布尔型。当左右两端的值有一方为True时，其结果就为True，只有在双方都为False时，其结果才为False。</p>
+<h2 id="2-3-not："><a href="#2-3-not：" class="headerlink" title="2.3 not："></a>2.3 not：</h2><p>属于单步运算，其结果也是布尔型。其作用就是求反，如果变量为True，结果为False，如果为False，其结果为True。</p>
+<h4 id="注意："><a href="#注意：" class="headerlink" title="*注意："></a>*注意：</h4><p>逻辑运算、比较运算常用在条件中使用。同时，这两种运算符经常配合使用。</p>
+<h1 id="3、循环控制语句"><a href="#3、循环控制语句" class="headerlink" title="3、循环控制语句"></a>3、循环控制语句</h1><h2 id="3-1-for循环"><a href="#3-1-for循环" class="headerlink" title="3.1 for循环"></a>3.1 for循环</h2><h3 id="3-1-1第一种：（推荐）"><a href="#3-1-1第一种：（推荐）" class="headerlink" title="3.1.1第一种：（推荐）"></a>3.1.1第一种：（推荐）</h3><p>for 变量 in 集合：<br>    代码</p>
+<h3 id="3-1-2说明："><a href="#3-1-2说明：" class="headerlink" title="3.1.2说明："></a>3.1.2说明：</h3><p>这种循环方式，我们称为快速迭代循环，能够对集合数据进行遍历。</p>
+<h4 id="注意：-1"><a href="#注意：-1" class="headerlink" title="*注意："></a>*注意：</h4><p>这种方式只能用在集合数据上，比如：字符串、列表、元组、字典等内容。</p>
+<h4 id="例如："><a href="#例如：" class="headerlink" title="*例如："></a>*例如：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$ string1 = <span class="string">'hello world'</span></span><br><span class="line">$ <span class="keyword">for</span> item <span class="keyword">in</span> string1:  <span class="comment">#对字符串string1进行遍历</span></span><br><span class="line">$ 	<span class="built_in">print</span>(item)</span><br><span class="line">$ h</span><br><span class="line">$ e</span><br><span class="line">$ l</span><br><span class="line">$ l</span><br><span class="line">$ o</span><br><span class="line">$ </span><br><span class="line">$ w</span><br><span class="line">$ o</span><br><span class="line">$ r</span><br><span class="line">$ l</span><br><span class="line">$ d</span><br></pre></td></tr></table></figure>
+<h2 id="3-2第二种：传统式，配合range-函数使用。通过range-函数指定了循环的范围。"><a href="#3-2第二种：传统式，配合range-函数使用。通过range-函数指定了循环的范围。" class="headerlink" title="3.2第二种：传统式，配合range()函数使用。通过range()函数指定了循环的范围。"></a>3.2第二种：传统式，配合range()函数使用。通过range()函数指定了循环的范围。</h2><p>for i in range(循环次数):<br>    代码</p>
+<h3 id="3-2-1说明："><a href="#3-2-1说明：" class="headerlink" title="3.2.1说明："></a>3.2.1说明：</h3><p>这种循环方式，采用指定循环次数，对目标集合进行遍历。其做法主要是让循环与集合的下标同步，在循环次数时一同取出集合指定下标的对应值。</p>
+<h2 id="3-3-range-函数："><a href="#3-3-range-函数：" class="headerlink" title="3.3 range()函数："></a>3.3 range()函数：</h2><h3 id="3-3-1函数格式："><a href="#3-3-1函数格式：" class="headerlink" title="3.3.1函数格式："></a>3.3.1函数格式：</h3><p>range(stop) :缺省情况下，表示从0开始，循环n次<br>range(star,stop[,step])<br>其中，star：循环开始的值，stop：循环次数，step：循环步长。注意此处循环，会根据stop中的值循环规定的次数，但是显示时会从start位置开始。</p>
+<h4 id="例如：-1"><a href="#例如：-1" class="headerlink" title="*例如："></a>*例如：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">for</span> i <span class="keyword">in</span> range(3,10):</span><br><span class="line">$	 <span class="built_in">print</span>(i,end=<span class="string">' '</span>)</span><br><span class="line">$ 3 4 5 6 7 8 9 </span><br><span class="line"></span><br><span class="line">$ <span class="keyword">for</span> i <span class="keyword">in</span> range(5,10):</span><br><span class="line">$ 	<span class="built_in">print</span>(i,end=<span class="string">' '</span>)</span><br><span class="line">$ 5 6 7 8 9 </span><br><span class="line">$ range(1,10)</span><br></pre></td></tr></table></figure>
+<h2 id="3-4-for循环的常用方式：嵌套"><a href="#3-4-for循环的常用方式：嵌套" class="headerlink" title="3.4 for循环的常用方式：嵌套"></a>3.4 for循环的常用方式：嵌套</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="comment">#冒泡排序</span></span><br><span class="line">$ list3 = [2,3,1,5,4]</span><br><span class="line">$ <span class="keyword">for</span> m <span class="keyword">in</span> range(len(list3)):</span><br><span class="line">$     <span class="keyword">for</span> n <span class="keyword">in</span> range(m+1,len(list3)):</span><br><span class="line">$         first = list3[m]</span><br><span class="line">$         second = list3[n]</span><br><span class="line">$         <span class="keyword">if</span> first &gt; second:</span><br><span class="line">$             list3[m] = list3[n]</span><br><span class="line">$             list3[n] = first</span><br><span class="line">$ <span class="built_in">print</span>(list3)</span><br><span class="line">$ [1,2,3,4,5]</span><br><span class="line">```    </span><br><span class="line"><span class="comment">#### *注意：</span></span><br><span class="line">在这种嵌套表示的过程中，变量的位置尤为重要，通用原则为：如果变量的值需要通过外层循环来获取或生成，那么我们可以将其设为全局变量，即与外层循环<span class="keyword">for</span>同等级的变量，如果变量需要在内层循环中生成或获取，我们通常会在外循环中声明，即与内循环同级。</span><br><span class="line"><span class="comment">##  3.5 while循环</span></span><br><span class="line"><span class="comment">###   3.5.1格式：</span></span><br><span class="line">``` bash</span><br><span class="line">$ words = <span class="string">'苍老师贩毒 '</span></span><br><span class="line">$ content = <span class="string">''</span></span><br><span class="line">$ <span class="keyword">while</span> True:</span><br><span class="line">$     msg = input(<span class="string">'欢迎进入论坛，发帖请输入I；退出请输入E\n'</span>)</span><br><span class="line">$     <span class="keyword">if</span> msg == <span class="string">'I'</span>:</span><br><span class="line">$         content = input(<span class="string">'请输入帖子内容：'</span>)</span><br><span class="line">$         <span class="keyword">for</span> item <span class="keyword">in</span> words:</span><br><span class="line">$            <span class="keyword">if</span> item <span class="keyword">in</span> content:</span><br><span class="line">$                <span class="built_in">print</span>(<span class="string">'有敏感词汇请重新输入'</span>)</span><br><span class="line">$                <span class="built_in">break</span></span><br><span class="line">$            <span class="keyword">else</span>:</span><br><span class="line">$                <span class="built_in">print</span>(<span class="string">'发帖成功！'</span>)</span><br><span class="line">$    <span class="keyword">elif</span> msg == <span class="string">'E'</span>:</span><br><span class="line">$        <span class="built_in">print</span>(<span class="string">'拜拜'</span>)</span><br><span class="line">$        <span class="built_in">break</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-6-break与continue"><a href="#3-6-break与continue" class="headerlink" title="3.6 break与continue"></a>3.6 break与continue</h2><p>break：当满足指定条件时，break表示中断（中止）此循环，如果循环外部还有其他代码则继续向下执行。</p>
+<p>continue：当满足指定条件时，continue表示结束本次循环，开始下一次循环。注意continue并没有退出循环。<br>同时，这两个关键字都是必须配合循环语句来使用，不能单独用在其他地方，比如：if</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/13/4/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
+    <article id="post-3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/12/3/">二、数据类型</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/12/3/" class="archive-article-date">
+  	<time datetime="2018-07-12T01:32:48.955Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="注意"><a href="#注意" class="headerlink" title="**注意"></a><em>**</em>注意</h4><p>[::]此为缺省状态</p>
+<h1 id="1、常见的数据类型："><a href="#1、常见的数据类型：" class="headerlink" title="1、常见的数据类型："></a>1、常见的数据类型：</h1><p>整型<br>浮点型<br>布尔型<br>复数型<br>字符串型<br>我们工作中常用到整型、字符串</p>
+<h1 id="2、整型"><a href="#2、整型" class="headerlink" title="2、整型"></a>2、整型</h1><p>我们通常根据计算机中数据编码格式，将整型分为：二进制、八进制、十进制、十六进制四种类型。</p>
+<h2 id="2-1进制间的转换"><a href="#2-1进制间的转换" class="headerlink" title="2.1进制间的转换"></a>2.1进制间的转换</h2><p>二进制转十进制：bin(int)=&gt;将十进制转为二进制   int(bin)=&gt;将二进制转为十进制<br>八进制转十进制：oct(int)=&gt;将十进制转为八进制   int(oct)=&gt;将八进制转为十进制<br>十六进制转十进制： hex(int)=&gt;将十进制转为十六进制，int(hex)=&gt;将十六进制转为十进</p>
+<h1 id="3、运算符"><a href="#3、运算符" class="headerlink" title="3、运算符"></a>3、运算符</h1><h2 id="3-1算术运算符：-、-、-、"><a href="#3-1算术运算符：-、-、-、" class="headerlink" title="3.1算术运算符：+、-、*、/"></a>3.1算术运算符：+、-、*、/</h2><p>在python中默认的数据类型是浮点型，因此在执行算术运算时5/2=2.5，而不是2.<br>‘5’并不是中间数，也就是说五舍六入，’1.5‘除外</p>
+<h2 id="3-2-："><a href="#3-2-：" class="headerlink" title="3.2 %："></a>3.2 %：</h2><p>两数进行求余运算，如果分子大于分母，得余数；如果分子小于分母，直接得分子。</p>
+<h4 id="注意："><a href="#注意：" class="headerlink" title="*注意："></a>*注意：</h4><p>只有分子除尽分母时，结果才返回0</p>
+<h2 id="3-3-："><a href="#3-3-：" class="headerlink" title="3.3 //："></a>3.3 //：</h2><p>两数相除取整数.</p>
+<h4 id="注意：-1"><a href="#注意：-1" class="headerlink" title="*注意："></a>*注意：</h4><p>此处得到的整数，为结果的整数部分不进行四舍五入操作。</p>
+<h2 id="3-4-："><a href="#3-4-：" class="headerlink" title="3.4 **："></a>3.4 **：</h2><p>数的连乘<br>例如：2**4 数2连续相乘4次，也可以说数2的4次幂</p>
+<h1 id="补充"><a href="#补充" class="headerlink" title="*补充"></a><strong>*</strong>补充</h1><h1 id="1、对于数值运算的四舍五入操作"><a href="#1、对于数值运算的四舍五入操作" class="headerlink" title="1、对于数值运算的四舍五入操作"></a>1、对于数值运算的四舍五入操作</h1><p>math包中的floor()和ceil()函数</p>
+<h2 id="1-1-floor"><a href="#1-1-floor" class="headerlink" title="1.1 floor()"></a>1.1 floor()</h2><p>只舍不入，取最小：<br>import math<br>math.floor(3/2) =&gt;1   等同于 3//2</p>
+<h2 id="1-2-ceil"><a href="#1-2-ceil" class="headerlink" title="1.2 ceil()"></a>1.2 ceil()</h2><p>math.ceil(3/2) =&gt;2    此处，只要有小数位就进位，不管小数部分是否大于等于5  只入不舍</p>
+<h2 id="1-3-round-数值-保留小数位数"><a href="#1-3-round-数值-保留小数位数" class="headerlink" title="1.3 round(数值,[保留小数位数])"></a>1.3 round(数值,[保留小数位数])</h2><p>进行五舍六入操作<br>round(1.5)=&gt;2<br>round(2.5)=&gt;2<br>round(1.4,1)=&gt;1.4  意味着保留小数点后一位<br>round(2.55,1)=2.5</p>
+<h1 id="2、其他操作函数"><a href="#2、其他操作函数" class="headerlink" title="2、其他操作函数"></a>2、其他操作函数</h1><h2 id="2-1求幂运算"><a href="#2-1求幂运算" class="headerlink" title="2.1求幂运算"></a>2.1求幂运算</h2><p>pow(2,3) =&gt;8 等同于2**3</p>
+<h2 id="2-2求绝对值"><a href="#2-2求绝对值" class="headerlink" title="2.2求绝对值"></a>2.2求绝对值</h2><p>abs(-10) =&gt; 10</p>
+<h2 id="2-3求两数相除的商与余数"><a href="#2-3求两数相除的商与余数" class="headerlink" title="2.3求两数相除的商与余数"></a>2.3求两数相除的商与余数</h2><p>divmod(5,3) =&gt;(1,2)    类似5%3=&gt;2</p>
+<h2 id="2-4运算符"><a href="#2-4运算符" class="headerlink" title="2.4运算符"></a>2.4运算符</h2><p>i = 10<br>i = i + 5  等同于  i+=5<br>i = i - 5  等同于  i-=5<br>i = i <em> 5  等同于  i</em>=5<br>i = i / 5  等同于  i/=5<br>i = i//5   等同于  i//=5<br>i = i <strong> 2 等同于  i</strong>=2<br>i = i % 3  等同于  i%=3</p>
+<h1 id="3、布尔型"><a href="#3、布尔型" class="headerlink" title="3、布尔型"></a>3、布尔型</h1><h2 id="3-1"><a href="#3-1" class="headerlink" title="3.1"></a>3.1</h2><p>python中布尔型分为True和False两种，但是在实际操作中我们也可以将其与1和0等同。</p>
+<h2 id="3-2"><a href="#3-2" class="headerlink" title="3.2"></a>3.2</h2><p>布尔型常用在逻辑运算和判断条件中，作为结果来使用。但是也可以参与算术运算，当进行算术运算时，True作为1、False作为0参与运算。</p>
+<h4 id="例如："><a href="#例如：" class="headerlink" title="*例如："></a>*例如：</h4><p>a = True     a + 1 =&gt; 2<br>b = False b + 1 =&gt;1<br>a + b =&gt; 1</p>
+<h4 id="注意：-2"><a href="#注意：-2" class="headerlink" title="*注意："></a>*注意：</h4><p>通常我们在python，不能将布尔型参与算术运算的。布尔型一般参加比较运算或逻辑运算，其返回值还是布尔型。<br>布尔型求非： not<br>not a =&gt; False<br>not b =&gt; True</p>
+<h1 id="4、精确的十进制"><a href="#4、精确的十进制" class="headerlink" title="4、精确的十进制"></a>4、精确的十进制</h1><p>在python中，我们通过阅读官方文档了解到，浮点数是一种近似值的表示，因此直接使用浮点数时常常出现精度丢失或不匹配情况发生。</p>
+<h2 id="4-1-Decmal"><a href="#4-1-Decmal" class="headerlink" title="4.1 Decmal()"></a>4.1 Decmal()</h2><p>python中提出了Decimal对象来进行解决，通过引入 import decimal生成一个decimal对象，将浮点数转换为decimal类型，可以支持完成对应的算术运算。</p>
+<h4 id="例如：-1"><a href="#例如：-1" class="headerlink" title="*例如："></a>*例如：</h4><p>from decimal import Decimal   # 引入decimal包中的Deciaml对象<br>f1 = 12.4556<br>f2 = 24.3<br>c = Decimal.from_float(f1)    # 将浮点数转换为decimal对象<br>a = Decimal(f1).quantize(Decimal(‘0.00’)) #将浮点数转换为decimal对象，同时指定该数值的精度，保留小数点后两位，并自动完成四舍五入。<br>b = Decimal(f2).quantize(Decimal(‘0.00’))<br>print((a*b).quantize(Decimal(‘0.00’)))</p>
+<h4 id="注意：-3"><a href="#注意：-3" class="headerlink" title="*注意："></a>*注意：</h4><p>一般转为Decimal运算后还要转为float</p>
+<h1 id="5、字符串"><a href="#5、字符串" class="headerlink" title="5、字符串"></a>5、字符串</h1><h2 id="5-1字符串声明："><a href="#5-1字符串声明：" class="headerlink" title="5.1字符串声明："></a>5.1字符串声明：</h2><p>可以使用’’也可以使用””，他们都可以表示字符串内容。</p>
+<h2 id="5-2比较运算符："><a href="#5-2比较运算符：" class="headerlink" title="5.2比较运算符："></a>5.2比较运算符：</h2><p>‘&gt;、&lt;、==、!=、&gt;=、&lt;=’他们的返回值为布尔型，即True或False</p>
+<p>字符串进行比较时，采用对应位置的逐字母进行比较，首先将字母转成ASCII码，然后根据码值进行比较大小。如果一旦出现一方的字母码值大于另一方，就结束比较。</p>
+<h4 id="提示："><a href="#提示：" class="headerlink" title="*提示："></a>*提示：</h4><p>在键盘上，所有的字符的ASCII码值都小于a,b,c…..这些字母的码值<br>只有这四个字符的ASCII码值大于字母z的码值：’{‘、’|’、’}’、’~’，它们的码值从123-126</p>
+<h2 id="5-3-input"><a href="#5-3-input" class="headerlink" title="5.3 input()"></a>5.3 input()</h2><p>我们使用input()，允许进行交互式输入，默认input()输入的值类型为str字符串类型。<br>例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ input(<span class="string">'请输入：'</span>)</span><br></pre></td></tr></table></figure></p>
+<h1 id="6、字符串常用的方法"><a href="#6、字符串常用的方法" class="headerlink" title="6、字符串常用的方法"></a>6、字符串常用的方法</h1><h2 id="6-1-find-查找"><a href="#6-1-find-查找" class="headerlink" title="6.1 find() 查找"></a>6.1 find() 查找</h2><h3 id="6-1-1函数格式："><a href="#6-1-1函数格式：" class="headerlink" title="6.1.1函数格式："></a>6.1.1函数格式：</h3><p>str.find(子字符串[,开始索引位，结束索引位])</p>
+<h3 id="6-1-2返回值："><a href="#6-1-2返回值：" class="headerlink" title="6.1.2返回值："></a>6.1.2返回值：</h3><p>如果查找成功，则返回所查找内容在字符串中的索引位置，如果没有找到，返回-1.</p>
+<h4 id="注意：-4"><a href="#注意：-4" class="headerlink" title="*注意："></a>*注意：</h4><p>如果所查找的内容中，有多个相同的字母，只会返回第一个字母所在的索引位。比如：<br>str1 = ‘hello’<br>str1.find(‘ll’) =&gt; 2  该例中，’ll’在字符串中出现了两次，但只会返回第一次出现的索引位置。</p>
+<p>为什么查找时，没有找到目标字符串的情况下会返回-1。其实，在find操作中，会对字符串进行扫描从字符串的索引位0开始，一直到字符串结尾，如果在字符串最后一位没有找到匹配的内容，将指向字符串结束符(EOF)，该结束符为-1。所以找不到时，find返回值为-1.<br>更多用法：</p>
+<h4 id="例如：-2"><a href="#例如：-2" class="headerlink" title="*例如："></a>*例如：</h4><p>交互式<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ string1 = <span class="string">'apple,banana,apple,apple'</span></span><br><span class="line">$ string1.find(<span class="string">'apple'</span>)</span><br><span class="line">$ 0</span><br><span class="line">$ string1.find(<span class="string">'apple'</span>,5)</span><br><span class="line">$ 13</span><br><span class="line">$ string1.find(<span class="string">'apple'</span>,7,20)</span><br><span class="line">$ 13</span><br><span class="line">$ string1.find(<span class="string">'apple'</span>,14,20)</span><br><span class="line">$ -1</span><br><span class="line">$ string1.find(<span class="string">'apple'</span>,14,24)</span><br><span class="line">$ 19</span><br></pre></td></tr></table></figure></p>
+<h1 id="7、对比："><a href="#7、对比：" class="headerlink" title="7、对比："></a>7、对比：</h1><h2 id="7-1-index"><a href="#7-1-index" class="headerlink" title="7.1 index()"></a>7.1 index()</h2><p>返回指定字符的索引位</p>
+<h3 id="7-1-1函数格式："><a href="#7-1-1函数格式：" class="headerlink" title="7.1.1函数格式："></a>7.1.1函数格式：</h3><p>index(子字符串[,开始索引位，结束索引位])</p>
+<h3 id="7-1-2返回值："><a href="#7-1-2返回值：" class="headerlink" title="7.1.2返回值："></a>7.1.2返回值：</h3><p>如果找到指定的字符串，则返回其索引位；如果找不到就报错ValueError</p>
+<h2 id="7-2-find-与index-函数的区别"><a href="#7-2-find-与index-函数的区别" class="headerlink" title="7.2 find()与index()函数的区别"></a>7.2 find()与index()函数的区别</h2><p>第一，两者在执行结果时类似的，如果找到指定的字符就会返回其索引位<br>第二，find()如果找不到指定的字符时，返回-1；而index()找不到指定的字符，raise ValueError.<br>第三，从效率上来讲，index的查询速度要优于find,因为在python中对于像字符串这样的有序数据类型，会产生一个索引对象来自动维护其序列，find()函数不管是否有这样的序列，都需要在字符串本身进行逐一查找，而index()会通过这个索引对象的映射方式，来快速找到对应的索引位。</p>
+<h2 id="7-3-split-拆分字符串"><a href="#7-3-split-拆分字符串" class="headerlink" title="7.3 split() 拆分字符串"></a>7.3 split() 拆分字符串</h2><h3 id="7-3-1函数格式："><a href="#7-3-1函数格式：" class="headerlink" title="7.3.1函数格式："></a>7.3.1函数格式：</h3><p>str.split([分隔符])</p>
+<h3 id="7-3-2返回值："><a href="#7-3-2返回值：" class="headerlink" title="7.3.2返回值："></a>7.3.2返回值：</h3><p>根据指定的分隔符，对字符串进行拆分，返回一个列表；如果不指定分隔符，那么会将整个字符串，作为列表的一个元素。</p>
+<h4 id="例如：-3"><a href="#例如：-3" class="headerlink" title="*例如："></a>*例如：</h4><p>交互式:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ string1 = <span class="string">'tv,pc,notebook,phone'</span></span><br><span class="line">$ string1.split(<span class="string">','</span>)</span><br><span class="line">$ [<span class="string">'tv'</span>, <span class="string">'pc'</span>, <span class="string">'notebook'</span>, <span class="string">'phone'</span>]</span><br><span class="line">$ string1.split()</span><br><span class="line">$ [<span class="string">'tv,pc,notebook,phone'</span>]</span><br></pre></td></tr></table></figure></p>
+<h4 id="注意：-5"><a href="#注意：-5" class="headerlink" title="*注意："></a>*注意：</h4><p>split中的分隔符，我们根据字符串中的实际情况而定。如果使用了不正确的分隔符，str.split(‘错误分隔符’)操作结果str.split(),会将整个字符串作为列表的一个元素。</p>
+<h2 id="7-4-strip"><a href="#7-4-strip" class="headerlink" title="7.4 strip()"></a>7.4 strip()</h2><p>字符串左右两端去除指定字符（默认情况，去除空格）</p>
+<h3 id="7-4-1函数格式："><a href="#7-4-1函数格式：" class="headerlink" title="7.4.1函数格式："></a>7.4.1函数格式：</h3><p>str.strip([指定字符])</p>
+<h3 id="7-4-2返回值："><a href="#7-4-2返回值：" class="headerlink" title="7.4.2返回值："></a>7.4.2返回值：</h3><p>根据指定的字符，对字符串进行两端去除其内容，返回一个新的字符串。如果字符串中间有空格或指定字符，那么该函数不起作用。如果指定的字符在字符串左右两端不存在，那么将返回字符串本身。</p>
+<h4 id="例如：-4"><a href="#例如：-4" class="headerlink" title="*例如："></a>*例如：</h4><h3 id="7-4-3缺省情况"><a href="#7-4-3缺省情况" class="headerlink" title="7.4.3缺省情况"></a>7.4.3缺省情况</h3><p>交互式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ string1 = <span class="string">'  hello world  '</span></span><br><span class="line">$ string1.strip()</span><br><span class="line">$ <span class="string">'hello world'</span></span><br><span class="line">$ <span class="built_in">print</span>(string1)</span><br><span class="line">$ hello world</span><br></pre></td></tr></table></figure></p>
+<h3 id="7-4-4指定字符"><a href="#7-4-4指定字符" class="headerlink" title="7.4.4指定字符"></a>7.4.4指定字符</h3><p>交互式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ string1 = <span class="string">'awelcom to zhengzhoua'</span></span><br><span class="line">$ string1.strip(<span class="string">'a'</span>)</span><br><span class="line">$<span class="string">'welcom to zhengzhou'</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="注意：-6"><a href="#注意：-6" class="headerlink" title="*注意："></a>*注意：</h4><p>1、字符串类型，一旦被声明赋值后，其内容是不可被改变的，如果需要改变原字符串变量的值，必须对其进行重新赋值。<br>2、如果指定字符内容为一个字符序列，那么意味着使用strip去除左右两端指定字符时，只要符合字符序列中的某一位，就进行去除</p>
+<h4 id="列如："><a href="#列如：" class="headerlink" title="*列如："></a>*列如：</h4><p>交互式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ string1 = <span class="string">' awelcom to zhengzhouab'</span></span><br><span class="line">$ string1.strip(<span class="string">' ab'</span>)</span><br><span class="line">$ <span class="string">'welcom to zhengzhou'</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="7-5-replace-替换函数"><a href="#7-5-replace-替换函数" class="headerlink" title="7.5 replace()替换函数"></a>7.5 replace()替换函数</h2><h3 id="7-5-1函数格式："><a href="#7-5-1函数格式：" class="headerlink" title="7.5.1函数格式："></a>7.5.1函数格式：</h3><p>str.replace(old,new[,max])</p>
+<h3 id="7-5-2返回值："><a href="#7-5-2返回值：" class="headerlink" title="7.5.2返回值："></a>7.5.2返回值：</h3><p>将指定字符串（old）替换为新字符串（new）,最大可以替换max次。替换完成后，返回一个新字符串。</p>
+<h4 id="注意：-7"><a href="#注意：-7" class="headerlink" title="*注意："></a>*注意：</h4><p>此处的max参数，主要用来指定替换的次数，如果该参数缺省，表示替换里面所有符合条件的字符串</p>
+<h4 id="例如：-5"><a href="#例如：-5" class="headerlink" title="*例如："></a>*例如：</h4><p>交互式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ string1 = <span class="string">'honor,oppo,vivo,apple,oppo,oppo'</span></span><br><span class="line">$ old_str = <span class="string">'oppo'</span></span><br><span class="line">$ new_str = <span class="string">'xiaomi'</span></span><br><span class="line">$ string1.replace(old_str, new_str)     <span class="comment"># 替换所有的oppo</span></span><br><span class="line">$ <span class="string">'honor,xiaomi,vivo,apple,xiaomi,xiaomi'</span></span><br><span class="line">$ string1.replace(old_str, new_str,2)   <span class="comment">#替换指定次数，即两处oppo</span></span><br><span class="line">$ <span class="string">'honor,xiaomi,vivo,apple,xiaomi,oppo'</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="7-6判断函数："><a href="#7-6判断函数：" class="headerlink" title="7.6判断函数："></a>7.6判断函数：</h2><p>isalnum()、isalpha()、isdigit()<br>函数格式：str.isalnum()    判断字符串内容，是否有数字或字母组成<br>          str.isalpha()    判断字符串内容，是否由字母组成<br>          str.isdigit()    判断字符串内容，是否由数字组成<br>返回值：如果符合条件，返回True；如果不符合，返回False。</p>
+<h1 id="8、-字符串运算符"><a href="#8、-字符串运算符" class="headerlink" title="8、[]字符串运算符"></a>8、[]字符串运算符</h1><h2 id="8-1使用方法："><a href="#8-1使用方法：" class="headerlink" title="8.1使用方法："></a>8.1使用方法：</h2><p>str[索引位] =&gt; 返回指定索引位的字符，</p>
+<h3 id="8-1-1索引位有两种表示方式："><a href="#8-1-1索引位有两种表示方式：" class="headerlink" title="8.1.1索引位有两种表示方式："></a>8.1.1索引位有两种表示方式：</h3><p>string1 = hello world<br>第一种：string1[0] =&gt; h    到string1[10] =&gt; d<br>第二种：string1[-1] =&gt; d   到string1[-11] =&gt; h</p>
+<h2 id="8-2切片操作"><a href="#8-2切片操作" class="headerlink" title="8.2切片操作:"></a>8.2切片操作:</h2><h3 id="8-2-1格式："><a href="#8-2-1格式：" class="headerlink" title="8.2.1格式："></a>8.2.1格式：</h3><p>str[start,end,step]<br>start：代表切片开始的索引位<br>end: 代表切片结束的索引位（但是不会输出该索引位指向的字符）<br>step：代表每隔次几个字符个数截取一个</p>
+<h4 id="或者这样理解："><a href="#或者这样理解：" class="headerlink" title="*或者这样理解："></a>*或者这样理解：</h4><p>从索引start开始索引end次，隔step个字符输出一次</p>
+<h4 id="例如：-6"><a href="#例如：-6" class="headerlink" title="*例如："></a>*例如：</h4><p>string1 = hello world<br>string1[0:3] =&gt; hel   从索引位为0的字符开始，到索引位3结束，但不包括索引位3所指向的字符。<br>string1[2:4] =&gt; ll<br>string1[0:-1] =&gt; hello worl<br>string1[0:8:2] =&gt; hlow</p>
+<h4 id="特殊的："><a href="#特殊的：" class="headerlink" title="*特殊的："></a>*特殊的：</h4><p>str1[:]  =&gt; ‘hello world’ 等于将字符串进行复制<br>str1[:5] =&gt; ‘hello’       如果没有标明开始索引位，默认从0开始<br>str1[::] =&gt; ‘hello world’  等同于str1[:]</p>
+<h3 id="8-2-2使用步长，实现字符串反转"><a href="#8-2-2使用步长，实现字符串反转" class="headerlink" title="8.2.2使用步长，实现字符串反转"></a>8.2.2使用步长，实现字符串反转</h3><p>string1[-1::-1]  =&gt;dlrow olleh    从索引位-1开始，一直到字符串结束，反向输出字符<br>string1[:8:-1] =&gt;dl<br>string1[:-3:-1] =&gt;dl<br>但是下列操作，会返回一个空字符串：<br>string1[-1:4]  =&gt; ‘’<br>string1[-1:-5] =&gt; ‘’</p>
+<h1 id="9、连接符与重复操作符"><a href="#9、连接符与重复操作符" class="headerlink" title="9、连接符与重复操作符"></a>9、连接符与重复操作符</h1><h2 id="9-1-："><a href="#9-1-：" class="headerlink" title="9.1 +："></a>9.1 +：</h2><p>在字符串中使用时，作为连接两个字符串，并返回一个新字符串的作用来使用。</p>
+<h2 id="9-2-："><a href="#9-2-：" class="headerlink" title="9.2 *："></a>9.2 *：</h2><p>重复操作指定的次数，即将字符串重复输出N次。返回一个新字符串。</p>
+<h3 id="注意：-8"><a href="#注意：-8" class="headerlink" title="*注意："></a>*注意：</h3><p>在重复操作中，必须遵循：字符串*正整数这样的格式，如果数值不是正整数，其结果返回一个空字符串，如果不是数值类型，程序报错。</p>
+<h2 id="9-3-in运算符"><a href="#9-3-in运算符" class="headerlink" title="9.3 in运算符"></a>9.3 in运算符</h2><p>用来检测指定的内容，是否在字符串中，如果存在则返回True，反之返回False</p>
+<h3 id="例如"><a href="#例如" class="headerlink" title="*例如:"></a>*例如:</h3><p>交互式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ string1 = <span class="string">'hello world'</span></span><br><span class="line">$ substr = <span class="string">'e'</span></span><br><span class="line">$ substr <span class="keyword">in</span> string1</span><br><span class="line">$ True</span><br><span class="line">$ substr = <span class="string">'ll'</span></span><br><span class="line">$ substr <span class="keyword">in</span> string1</span><br><span class="line">$ True</span><br><span class="line">$ substr = <span class="string">'wr'</span></span><br><span class="line">$ substr <span class="keyword">in</span> string1</span><br><span class="line">$ False</span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/12/3/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
     <article id="post-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
